@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookVerse</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+<body>
+
+    <section>
+
+        <nav>
+            <div class="logo">
+                <img src="image/logo1.png" alt="Logo">
+            </div>
+
+            <div class="search-box">
+                <select id="search-options">
+                    <option value="titulo">Título</option>
+                    <option value="titulo-autor">Título e Autor</option>
+                    <option value="editora">Editora</option>
+                    <option value="isbn">ISBN</option>
+                </select>
+                <input type="text" placeholder="O que você está procurando?">
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+
+            <div class="social-icon">
+                <a href="#" class="icon"><i class="fa-solid fa-heart"></i><span>Minhas Listas</span></a>
+                <a href="#" class="icon"><i class="fa-solid fa-user"></i><span>Entrar</span></a>
+                <a href="#" class="icon"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </nav>
+
+
+        <div class="main">
+
+            <div class="main_tag">
+                <h1>BEM-VINDO AO<br><span>BOOK VERSE</span></h1>
+                <p>
+                    Explore o fascinante universo dos livros em nossa plataforma. Aqui você encontrará uma vasta seleção
+                    de títulos, recomendações personalizadas e recursos para aprimorar sua experiência de leitura.
+                    Descubra novos mundos e histórias que irão cativar sua imaginação.
+                </p>
+                <a href="#" class="main_btn">Leia Mais</a>
+            </div>
+
+            <div class="main_img">
+                <img src="image/table.png">
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Services Section -->
+    <div class="services">
+
+        <div class="services_box">
+            <div class="services_card">
+                <i class="fa-solid fa-truck-fast"></i>
+                <h3>Entrega Rápida</h3>
+                <p>
+                    Receba seus pedidos com agilidade e eficiência, garantindo que seus produtos cheguem até você no
+                    menor tempo possível.
+                </p>
+            </div>
+
+            <div class="services_card">
+                <i class="fa-solid fa-headset"></i>
+                <h3>Serviços 24/7</h3>
+                <p>
+                    Oferecemos suporte ao cliente 24 horas por dia, 7 dias por semana, para atender suas dúvidas e
+                    necessidades a qualquer momento.
+                </p>
+            </div>
+
+            <div class="services_card">
+                <i class="fa-solid fa-tag"></i>
+                <h3>Melhor Negociação</h3>
+                <p>
+                    Aproveite as melhores ofertas e preços competitivos, garantindo sempre um ótimo custo-benefício em
+                    suas compras.
+                </p>
+            </div>
+
+            <div class="services_card">
+                <i class="fa-solid fa-lock"></i>
+                <h3>Pagamento Seguro</h3>
+                <p>
+                    Suas transações são protegidas com as mais recentes tecnologias de segurança, oferecendo uma
+                    experiência de compra tranquila.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Books -->
+    <div id="books" class="featured_books">
+        <h1>Livros em Destaques</h1>
+        <div class="featured_books_container">
+            <div class="featured_books_box">
+
+                <div class="featured_book_card">
+                    <div class="featured_book_img">
+                        <img src="image/book_16.jpg" alt="Book 1">
+                    </div>
+                    <div class="featured_book_tag">
+                        <h2>Os Códigos do Milhão</h2>
+                        <p class="writer">Pablo Marçal</p>
+                        <div class="categories">Evolução Pessoal</div>
+                        <p class="book_price">R$71.60<sub><del>R$120.00</del></sub></p>
+                        <a href="#" class="f_btn">Leia Mais</a>
+                    </div>
+                </div>
+
+                <div class="featured_book_card">
+                    <div class="featured_book_img">
+                        <img src="image/book_2.jpg" alt="Book 2">
+                    </div>
+                    <div class="featured_book_tag">
+                        <h2>Nome do Livro</h2>
+                        <p class="writer">Pessoa</p>
+                        <div class="categories">Categoria</div>
+                        <p class="book_price">R$25,50<sub><del>R$28,50</del></sub></p>
+                        <a href="#" class="f_btn">Leia Mais</a>
+                    </div>
+                </div>
+
+                <div class="featured_book_card">
+                    <div class="featured_book_img">
+                        <img src="image/book_3.jpg" alt="Book 3">
+                    </div>
+                    <div class="featured_book_tag">
+                        <h2>Nome do Livro</h2>
+                        <p class="writer">Pessoa</p>
+                        <div class="categories">Categoria</div>
+                        <p class="book_price">R$25,50<sub><del>R$28,50</del></sub></p>
+                        <a href="#" class="f_btn">Leia Mais</a>
+                    </div>
+                </div>
+
+                <div class="featured_book_card">
+                    <div class="featured_book_img">
+                        <img src="image/book_4.jpg" alt="Book 4">
+                    </div>
+                    <div class="featured_book_tag">
+                        <h2>Nome do Livro</h2>
+                        <p class="writer">Pessoa</p>
+                        <div class="categories">Categoria</div>
+                        <p class="book_price">R$25,50<sub><del>R$28,50</del></sub></p>
+                        <a href="#" class="f_btn">Leia Mais</a>
+                    </div>
+                </div>
+
+                <div class="featured_book_card">
+                    <div class="featured_book_img">
+                        <img src="image/book_5.jpg" alt="Book 5">
+                    </div>
+                    <div class="featured_book_tag">
+                        <h2>Nome do Livro</h2>
+                        <p class="writer">Pessoa</p>
+                        <div class="categories">Categoria</div>
+                        <p class="book_price">R$25,50<sub><del>R$28,50</del></sub></p>
+                        <a href="#" class="f_btn">Leia Mais</a>
+                    </div>
+                </div>
+
+                <div class="featured_book_card">
+                    <div class="featured_book_img">
+                        <img src="image/book_6.jpg" alt="Book 6">
+                    </div>
+                    <div class="featured_book_tag">
+                        <h2>Nome do Livro</h2>
+                        <p class="writer">Pessoa</p>
+                        <div class="categories">Categoria</div>
+                        <p class="book_price">R$25,50<sub><del>R$28,50</del></sub></p>
+                        <a href="#" class="f_btn">Leia Mais</a>
+                    </div>
+                </div>
+
+                <div class="featured_book_card">
+                    <div class="featured_book_img">
+                        <img src="image/book_7.png" alt="Book 7">
+                    </div>
+                    <div class="featured_book_tag">
+                        <h2>Nome do Livro</h2>
+                        <p class="writer">Pessoa</p>
+                        <div class="categories">Categoria</div>
+                        <p class="book_price">R$25,50<sub><del>R$28,50</del></sub></p>
+                        <a href="#" class="f_btn">Leia Mais</a>
+                    </div>
+                </div>
+
+                <div class="featured_book_card">
+                    <div class="featured_book_img">
+                        <img src="image/book_8.png" alt="Book 8">
+                    </div>
+                    <div class="featured_book_tag">
+                        <h2>Nome do Livro</h2>
+                        <p class="writer">Pessoa</p>
+                        <div class="categories">Categoria</div>
+                        <p class="book_price">R$25,50<sub><del>R$28,50</del></sub></p>
+                        <a href="#" class="f_btn">Leia Mais</a>
+                    </div>
+                </div>
+
+                <div class="featured_book_card">
+                    <div class="featured_book_img">
+                        <img src="image/book_9.jpg" alt="Book 9">
+                    </div>
+                    <div class="featured_book_tag">
+                        <h2>Nome do Livro</h2>
+                        <p class="writer">Pessoa</p>
+                        <div class="categories">Categoria</div>
+                        <p class="book_price">R$25,50<sub><del>R$28,50</del></sub></p>
+                        <a href="#" class="f_btn">Leia Mais</a>
+                    </div>
+                </div>
+
+                <div class="featured_book_card">
+                    <div class="featured_book_img">
+                        <img src="image/book_10.png" alt="Book 10">
+                    </div>
+                    <div class="featured_book_tag">
+                        <h2>Nome do Livro</h2>
+                        <p class="writer">Pessoa</p>
+                        <div class="categories">Categoria</div>
+                        <p class="book_price">R$25,50<sub><del>R$28,50</del></sub></p>
+                        <a href="#" class="f_btn">Leia Mais</a>
+                    </div>
+                </div>
+
+                <!-- Continuação de livros se precisar -->
+
+            </div>
+        </div>
+    </div>
+
+    <!--Arrivals-->
+
+    <div id="new_arrivals" class="arrivals">
+        <h1>Novos Lançamentos</h1>
+
+        <div class="arrivals_box">
+
+            <div class="arrivals_card">
+                <div class="arrivals_image">
+                    <img src="image/arrival_1.jpg">
+                </div>
+                <div class="arrivals_tag">
+                    <p>Novo Livro Lançado</p>
+                    <div class="arrivals_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <a href="#" class="arrivals_btn">Leia Mais</a>
+                </div>
+            </div>
+
+            <div class="arrivals_card">
+                <div class="arrivals_image">
+                    <img src="image/arrival_2.jpg">
+                </div>
+                <div class="arrivals_tag">
+                    <p>Novo Livro Lançado</p>
+                    <div class="arrivals_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <a href="#" class="arrivals_btn">Leia Mais</a>
+                </div>
+            </div>
+
+            <div class="arrivals_card">
+                <div class="arrivals_image">
+                    <img src="image/arrival_3.jpg">
+                </div>
+                <div class="arrivals_tag">
+                    <p>Novo Livro Lançado</p>
+                    <div class="arrivals_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <a href="#" class="arrivals_btn">Leia Mais</a>
+                </div>
+            </div>
+
+            <div class="arrivals_card">
+                <div class="arrivals_image">
+                    <img src="image/arrival_4.jpg">
+                </div>
+                <div class="arrivals_tag">
+                    <p>Novo Livro Lançado</p>
+                    <div class="arrivals_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <a href="#" class="arrivals_btn">Leia Mais</a>
+                </div>
+            </div>
+
+            <div class="arrivals_card">
+                <div class="arrivals_image">
+                    <img src="image/arrival_5.jpg">
+                </div>
+                <div class="arrivals_tag">
+                    <p>Novo Livro Lançado</p>
+                    <div class="arrivals_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <a href="#" class="arrivals_btn">Leia Mais</a>
+                </div>
+            </div>
+
+            <div class="arrivals_card">
+                <div class="arrivals_image">
+                    <img src="image/arrival_6.jpg">
+                </div>
+                <div class="arrivals_tag">
+                    <p>Novo Livro Lançado</p>
+                    <div class="arrivals_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <a href="#" class="arrivals_btn">Leia Mais</a>
+                </div>
+            </div>
+
+            <div class="arrivals_card">
+                <div class="arrivals_image">
+                    <img src="image/arrival_7.jpg">
+                </div>
+                <div class="arrivals_tag">
+                    <p>Novo Livro Lançado</p>
+                    <div class="arrivals_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <a href="#" class="arrivals_btn">Leia Mais</a>
+                </div>
+            </div>
+
+            <div class="arrivals_card">
+                <div class="arrivals_image">
+                    <img src="image/arrival_8.webp">
+                </div>
+                <div class="arrivals_tag">
+                    <p>Novo Livro Lançado</p>
+                    <div class="arrivals_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <a href="#" class="arrivals_btn">Leia Mais</a>
+                </div>
+            </div>
+
+            <div class="arrivals_card">
+                <div class="arrivals_image">
+                    <img src="image/arrival_9.jpg">
+                </div>
+                <div class="arrivals_tag">
+                    <p>Novo Livro Lançado</p>
+                    <div class="arrivals_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <a href="#" class="arrivals_btn">Leia Mais</a>
+                </div>
+            </div>
+
+            <div class="arrivals_card">
+                <div class="arrivals_image">
+                    <img src="image/arrival_10.jpg">
+                </div>
+                <div class="arrivals_tag">
+                    <p>Novo Livro Lançado</p>
+                    <div class="arrivals_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <a href="#" class="arrivals_btn">Leia Mais</a>
+                </div>
+            </div>
+
+            <div class="arrivals_card">
+                <div class="arrivals_image">
+                    <img src="image/arrival_11.jpg">
+                </div>
+                <div class="arrivals_tag">
+                    <p>Novo Livro Lançado</p>
+                    <div class="arrivals_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <a href="#" class="arrivals_btn">Leia Mais</a>
+                </div>
+            </div>
+
+            <div class="arrivals_card">
+                <div class="arrivals_image">
+                    <img src="image/arrival_12.jpg">
+                </div>
+                <div class="arrivals_tag">
+                    <p>Novo Livro Lançado</p>
+                    <div class="arrivals_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <a href="#" class="arrivals_btn">Leia Mais</a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer_container">
+            <div class="footer_section">
+                <h3>Sobre o Site</h3>
+                <p>BookVerse é seu destino para encontrar os melhores livros em destaque e novos lançamentos. Navegue
+                    por nossas coleções e descubra novas leituras que irão te inspirar!</p>
+            </div>
+
+            <div class="footer_section">
+                <h3>Links Rápidos</h3>
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#books">Livros em Destaque</a></li>
+                    <li><a href="#new_arrivals">Novos Lançamentos</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </div>
+
+            <div class="footer_section">
+                <h3>Contato</h3>
+                <p>Email: <a href="mailto:contato@bookverse.com">contato@bookverse.com</a></p>
+                <p>Telefone: (11) 1234-5678</p>
+            </div>
+
+            <div class="footer_section">
+                <h3>Siga-nos</h3>
+                <div class="social_links">
+                    <a href="#" class="social_icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="social_icon"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="social_icon"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="social_icon"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer_bottom">
+            <p>&copy; 2024 BookVerse. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
