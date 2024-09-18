@@ -1,23 +1,23 @@
-/* Global Styles */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: rgb(251, 251, 251); /* Define a cor de fundo global */
+    background-color: rgb(251, 251, 251); 
 }
 
-/* Navbar */
+
 nav {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #fff; /* Garante que o fundo seja branco */
+    background: #fff; 
     position: fixed;
     top: 0;
     z-index: 100;
-    padding: 10px 20px; /* Ajuste o padding para garantir que tudo tenha espaço */
+    padding: 10px 20px; 
 }
 
 nav .logo {
@@ -25,22 +25,22 @@ nav .logo {
     align-items: center;
     text-decoration: none;
     background-color: #fff;
-    gap: 10px; /* Espaço entre o ícone e o texto */
+    gap: 10px; 
 }
 
 nav .logo .logo-icon {
-    font-size: 40px; /* Tamanho do ícone */
-    color: #0066ff; /* Cor azul para o ícone */
+    font-size: 40px; 
+    color: #0066ff; 
     background-color: transparent;
 }
 
 nav .logo .logo-text {
-    font-size: 24px; /* Tamanho da fonte do texto */
+    font-size: 24px; 
     font-weight: bold;
-    color: #0066ff; /* Cor azul para o texto */
+    color: #0066ff; 
     background-color: #fff;
-    text-transform: uppercase; /* Opcional: transforma o texto em maiúsculas */
-    letter-spacing: 2px; /* Opcional: espaçamento entre letras */
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
 }
 
 nav .search-box {
@@ -60,7 +60,7 @@ nav .search-box button {
 
 nav .search-box select {
     border-radius: 10px 0 0 10px;
-    background-color: #fff !important; /* Garante que o fundo seja branco */
+    background-color: #fff !important; 
     color: #000;
     outline: none;
     cursor: pointer;
@@ -71,11 +71,11 @@ nav .search-box input {
     border-left: none;
     border-radius: 0;
     outline: none;
-    background-color: #fff !important; /* Garante que o fundo seja branco */
+    background-color: #fff !important; 
 }
 
 nav .search-box button {
-    background-color: #B100FF; /* Cor de fundo do botão */
+    background-color: #B100FF; 
     color: #fff;
     border-radius: 0 5px 5px 0;
     cursor: pointer;
@@ -85,11 +85,11 @@ nav .search-box button i {
     font-size: 16px;
 }
 
-/* Seções da Navbar */
+
 nav .sections {
     display: flex;
     align-items: center;
-    gap: 20px; /* Espaço entre cada item */
+    gap: 20px; 
     background-color: transparent;
 }
 
@@ -109,7 +109,7 @@ nav .sections a:hover {
     border-radius: 5px;
 }
 
-/* Pesquisa */
+
 nav .search-icon {
     display: flex;
     align-items: center;
@@ -131,7 +131,7 @@ nav .search-icon i {
     background-color: transparent;
 }
 
-/* Remove bordas e padding que podem estar forçando um fundo */
+
 nav .search-icon i, 
 nav .search-icon, 
 nav .search-icon * {
@@ -141,7 +141,7 @@ nav .search-icon * {
     box-shadow: none !important;
 }
 
-/* Campo de Busca Escondido */
+
 nav .search-box {
     display: none;
     flex: 1;
@@ -174,12 +174,12 @@ nav .search-box button:hover {
     background-color: #A000E0;
 }
 
-/* Social Icons */
+
 nav .social-icon {
     display: flex;
     background-color: #fff;
     align-items: center;
-    gap: 20px; /* Espaço entre os ícones */
+    gap: 20px; 
 }
 
 nav .social-icon .icon {
@@ -205,13 +205,13 @@ nav .social-icon i {
 }
 
 nav .social-icon span {
-    display: inline; /* Garante que o texto seja exibido ao lado do ícone */
+    display: inline; 
     background-color: #fff;
-    margin-left: 8px; /* Espaço entre o ícone e o texto */
+    margin-left: 8px; 
 }
 
 
-/* Promo */
+
 
 .promo {
     display: flex;
@@ -221,7 +221,7 @@ nav .social-icon span {
     padding: 50px 0;
     margin: 45px;
     max-width: 100%;
-    position: relative; /* Mantém o círculo dentro da seção promocional */
+    position: relative; 
 }
 
 .promo-text {
@@ -259,16 +259,16 @@ nav .social-icon span {
 
 .promo-image {
     position: relative;
-    margin-left: 150px; /* Ajuste o espaço entre a imagem e o texto */
-    overflow: visible; /* Garante que o círculo visível não seja cortado */
-    z-index: 2; /* Garante que a imagem fique sobre o círculo */
+    margin-left: 150px; 
+    overflow: visible; 
+    z-index: 2; 
 }
 
 .promo-image img {
     max-width: 400px;
     border-radius: 10px;
     position: relative;
-    display: block; /* Evita que o fundo branco da imagem se expanda */
+    display: block; 
 }
 
 .promo-circle {
@@ -279,13 +279,13 @@ nav .social-icon span {
     height: 500px;
     background-color: rgb(220, 240, 248);
     border-radius: 50%;
-    border: 10px solid #e0e0e0; /* Linha externa */
-    z-index: 1; /* Mantém o círculo atrás da imagem */
+    border: 10px solid #e0e0e0; 
+    z-index: 1; 
     transform: translate(-50%, -50%);
     opacity: 0.2;
 }
 
-/* Seção de Livros em Destaque */
+
 .featured_books {
     width: 100%;
     padding: 20px;
@@ -305,11 +305,11 @@ nav .social-icon span {
     gap: 20px;
     padding: 10px;
     scroll-behavior: smooth;
-    scrollbar-width: none; /* Para Firefox */
+    scrollbar-width: none; 
 }
 
 .featured_books_box::-webkit-scrollbar {
-    display: none; /* Para WebKit */
+    display: none; 
 }
 
 .featured_book_card {
@@ -368,7 +368,7 @@ nav .social-icon span {
     margin-left: 5px;
 }
 
-/* Seção de Detalhes */
+
 .book_details {
     display: none;
     position: fixed;
@@ -376,16 +376,16 @@ nav .social-icon span {
     right: 0;
     width: 50%;
     height: 100%;
-    background-color: rgb(21, 30, 41); /* Fundo escuro */
+    background-color: rgb(21, 30, 41); 
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
     padding: 20px;
     overflow-y: auto;
     z-index: 1000;
     box-sizing: border-box;
-    color: #fff; /* Cor do texto */
+    color: #fff; 
 }
 
-/* Exibe a seção de detalhes quando o ID correspondente é o alvo */
+
 .book_details:target {
     display: block;
 }
@@ -413,14 +413,14 @@ nav .social-icon span {
 .book_image img {
     max-width: 100%;
     height: auto;
-    max-height: 300px; /* Ajuste a altura máxima conforme necessário */
+    max-height: 300px; 
 }
 
 .book_details h2 {
-    font-size: 1.8em; /* Ajuste o tamanho da fonte conforme necessário */
+    font-size: 1.8em; 
     margin-bottom: 10px;
-    background-color: transparent; /* Fundo transparente */
-    color: #fff; /* Cor do texto */
+    background-color: transparent; 
+    color: #fff; 
 }
 
 .book_info {
@@ -434,29 +434,29 @@ nav .social-icon span {
 
 .info_item {
     text-align: center;
-    background-color: transparent; /* Fundo transparente */
+    background-color: transparent; 
 }
 
 .info_value {
-    font-size: 1.2em; /* Tamanho do valor */
+    font-size: 1.2em; 
     margin: 0;
-    background-color: transparent; /* Fundo transparente */
-    color: #fff; /* Cor do texto */
+    background-color: transparent; 
+    color: #fff; 
 }
 
 .info_label {
-    font-size: 0.9em; /* Tamanho do rótulo */
+    font-size: 0.9em; 
     margin: 0;
-    color: rgb(146, 144, 150); /* Cor do rótulo */
-    background-color: transparent; /* Fundo transparente */
+    color: rgb(146, 144, 150); 
+    background-color: transparent; 
 }
 
 .book_details p {
-    font-size: 1em; /* Ajuste o tamanho da fonte conforme necessário */
+    font-size: 1em; 
     text-align: center;
     margin-bottom: 10px;
-    background-color: transparent; /* Fundo transparente */
-    color: #fff; /* Cor do texto */
+    background-color: transparent; 
+    color: #fff; 
 }
 
 .add_to_cart {
@@ -482,7 +482,7 @@ nav .social-icon span {
     background-color: #4a148c;
 }
 
-/* Banner */
+
 .explore-box {
     position: relative;
     display: flex;
@@ -490,48 +490,48 @@ nav .social-icon span {
     justify-content: center;
     background-color: rgb(234, 243, 247);
     border-radius: 10px;
-    max-width: 1300px; /* Ajuste conforme necessário */
-    margin: 50px auto; /* Centralize horizontalmente */
+    max-width: 1300px; 
+    margin: 50px auto; 
     padding: 64px 0px 64px 64px;
     min-height: 400px;
-    overflow: hidden; /* Para garantir que o círculo não escape do box */
+    overflow: hidden; 
 }
 
 .explore-title {
-    font-size: 40px; /* Aumente o tamanho do título conforme necessário */
+    font-size: 40px; 
     color: #333;
     background-color: transparent;
     margin-bottom: 20px;
-    z-index: 3; /* Ajuste para garantir que o título fique sobre os círculos */
-    position: relative; /* Certifique-se de que o título fique acima dos círculos */
+    z-index: 3; 
+    position: relative; 
 }
 
 .explore-quote {
-    font-size: 16px; /* Aumente o tamanho do quote conforme necessário */
+    font-size: 16px; 
     font-weight: 400;
     color: #666;
     background-color: transparent;
     display: block;
     margin-bottom: 30px;
-    z-index: 3; /* Ajuste para garantir que o quote fique sobre os círculos */
-    position: relative; /* Certifique-se de que o quote fique acima dos círculos */
+    z-index: 3; 
+    position: relative; 
 }
 
 .explore-button {
     margin: 0;
     display: inline-block;
-    padding: 16px 30px; /* Ajuste o padding para um tamanho mais compacto */
+    padding: 16px 30px; 
     background-color: #0066ff;
     color: #fff;
-    font-size: 14px; /* Ajuste o tamanho da fonte para um tamanho menor */
-    border-radius: 20px; /* Arredondamento mais sutil */
+    font-size: 14px; 
+    border-radius: 20px; 
     text-decoration: none;
     z-index: 3;
     font-weight: bold;
     transition: background-color 0.3s ease;
-    width: auto; /* Certifique-se de que a largura é automática para o conteúdo */
-    max-width: 150px; /* Defina uma largura máxima para o botão */
-    text-align: center; /* Centralize o texto no botão */
+    width: auto; 
+    max-width: 150px; 
+    text-align: center; 
 }
 
 
@@ -548,7 +548,7 @@ nav .social-icon span {
     position: absolute;
     top: 40px;
     left: 40px;
-    z-index: 1; /* Para o círculo ficar atrás do conteúdo */
+    z-index: 1; 
 }
 
 .explore-box::after {
@@ -558,49 +558,49 @@ nav .social-icon span {
     background-color: rgb(208, 228, 237);
     border-radius: 100%;
     position: absolute;
-    top: 50%; /* Mantém a posição vertical centralizada */
-    left: 75%; /* Ajuste a posição horizontal para a direita */
-    transform: translate(-50%, -35%); /* Centraliza o círculo baseado no ponto ajustado */
+    top: 50%; 
+    left: 75%; 
+    transform: translate(-50%, -35%); 
     z-index: 1;
     opacity: 0.6;
 }
 
 .explore-image {
     position: absolute;
-    top: 50%; /* Ajusta a posição vertical para centralizar sobre o círculo */
-    left: 80%; /* Ajusta a posição horizontal para a direita, além do círculo */
-    transform: translate(-50%, -35%); /* Centraliza a imagem baseado na posição ajustada */
-    z-index: 2; /* Garante que a imagem fique sobre o círculo */
-    max-width: 500px; /* Aumenta o tamanho da imagem conforme necessário */
+    top: 50%; 
+    left: 80%; 
+    transform: translate(-50%, -35%); 
+    z-index: 2; 
+    max-width: 500px; 
     height: auto;
-    background-color: transparent; /* Remove o fundo branco da imagem */
+    background-color: transparent; 
 }
 
-/* Custom Scrollbar */
+
 ::-webkit-scrollbar {
-    width: 10px; /* Largura da scrollbar vertical */
-    height: 10px; /* Altura da scrollbar horizontal */
+    width: 10px; 
+    height: 10px; 
 }
 
 ::-webkit-scrollbar-track {
-    background: #f1f1f1; /* Cor de fundo da pista da scrollbar */
+    background: #f1f1f1; 
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #B100FF; /* Cor do "polegar" da scrollbar */
+    background: #B100FF; 
     border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #a100e6; /* Cor do "polegar" quando estiver sobreposto */
+    background: #a100e6; 
 }
 
-/* Seção de Autores Populares */
+
 .authors {
     width: 100%;
     height: auto;
     padding: 50px 0;
-    background-color: #f9f9f9; /* Cor de fundo opcional para a seção */
+    background-color: #f9f9f9; 
 }
 
 .authors h1 {
@@ -614,29 +614,29 @@ nav .social-icon span {
     width: 95%;
     margin: 0 auto;
     display: flex;
-    flex-wrap: nowrap; /* Garante que os cards fiquem em uma única linha */
-    overflow-x: auto; /* Adiciona rolagem horizontal se necessário */
-    overflow-y: hidden; /* Garante que não haja rolagem vertical */
-    justify-content: flex-start; /* Alinha os cards à esquerda */
-    gap: 20px; /* Espaço entre os cards */
-    padding-bottom: 20px; /* Espaço para a barra de rolagem horizontal */
-    align-items: flex-start; /* Garante que os cards estejam alinhados ao topo */
+    flex-wrap: nowrap; 
+    overflow-x: auto; 
+    overflow-y: hidden; 
+    justify-content: flex-start; 
+    gap: 20px; 
+    padding-bottom: 20px; 
+    align-items: flex-start; 
 }
 
 .authors .author_box .author_card {
     width: 300px;
-    min-width: 300px; /* Garante que os cards não diminuam abaixo de 300px */
-    height: auto; /* Permite que a altura se ajuste conforme o conteúdo */
+    min-width: 300px; 
+    height: auto; 
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    background-color: #fff; /* Cor de fundo branca para os cards */
+    background-color: #fff; 
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex; /* Garante que o conteúdo se ajuste dentro do card */
+    display: flex; 
     flex-direction: column;
-    align-items: center; /* Alinha o conteúdo centralizado */
-    justify-content: center; /* Alinha o conteúdo centralizado */
+    align-items: center; 
+    justify-content: center; 
 }
 
 .authors .author_box .author_card:hover {
@@ -658,7 +658,7 @@ nav .social-icon span {
 }
 
 .authors .author_box .author_card .author_info {
-    background-color: #fff; /* Cor de fundo branca para a área de informações */
+    background-color: #fff; 
     padding: 10px;
     border-radius: 8px;
 }
@@ -676,7 +676,7 @@ nav .social-icon span {
 }
 
 
-/* Estilo para o Footer */
+
 footer {
     background-color: transparent;
     color: #333;
