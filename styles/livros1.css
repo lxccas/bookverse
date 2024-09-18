@@ -1,0 +1,227 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: rgb(251, 251, 251); /* Define a cor de fundo global */
+}
+
+/* Navbar */
+nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff; /* Garante que o fundo seja branco */
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    padding: 10px 20px; /* Ajuste o padding para garantir que tudo tenha espaço */
+}
+
+/* Navbar com listra roxa apenas na página Ficção Científica */
+.navbar.ficcao-cientifica .sections a {
+    position: relative;
+}
+
+.navbar.ficcao-cientifica .sections a.active::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px; /* Altura da listra */
+    background-color: #B100FF; /* Cor da listra */
+    position: absolute;
+    bottom: -4px; /* Ajusta a posição para ficar embaixo do texto */
+    left: 0;
+}
+
+nav .logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    background-color: #fff;
+    gap: 10px; /* Espaço entre o ícone e o texto */
+}
+
+nav .logo .logo-icon {
+    font-size: 40px; /* Tamanho do ícone */
+    color: #0066ff; /* Cor azul para o ícone */
+    background-color: transparent;
+}
+
+nav .logo .logo-text {
+    font-size: 24px; /* Tamanho da fonte do texto */
+    font-weight: bold;
+    color: #0066ff; /* Cor azul para o texto */
+    background-color: #fff;
+    text-transform: uppercase; /* Opcional: transforma o texto em maiúsculas */
+    letter-spacing: 2px; /* Opcional: espaçamento entre letras */
+}
+
+nav .search-box {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    max-width: 600px;
+    margin: 0 20px;
+}
+
+nav .search-box select,
+nav .search-box input,
+nav .search-box button {
+    padding: 10px;
+    border: 2px solid #B100FF;
+}
+
+nav .search-box select {
+    border-radius: 10px 0 0 10px;
+    background-color: #fff !important; /* Garante que o fundo seja branco */
+    color: #000;
+    outline: none;
+    cursor: pointer;
+}
+
+nav .search-box input {
+    width: 100%;
+    border-left: none;
+    border-radius: 0;
+    outline: none;
+    background-color: #fff !important; /* Garante que o fundo seja branco */
+}
+
+nav .search-box button {
+    background-color: #B100FF; /* Cor de fundo do botão */
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+nav .search-box button i {
+    font-size: 16px;
+}
+
+/* Seções da Navbar */
+nav .sections {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espaço entre cada item */
+    background-color: transparent;
+}
+
+nav .sections a {
+    color: #000;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    padding: 8px 16px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    background-color: transparent;
+}
+
+nav .sections a:hover {
+    color: #B100FF;
+    border-radius: 5px;
+}
+
+/* Pesquisa */
+nav .search-icon {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: #000;
+    font-size: 20px;
+    transition: color 0.3s ease;
+    background-color: transparent;
+    border: none;
+}
+
+nav .search-icon:hover {
+    color: #B100FF;
+    background-color: transparent;
+}
+
+nav .search-icon i {
+    margin-left: 10px;
+    background-color: transparent;
+}
+
+/* Remove bordas e padding que podem estar forçando um fundo */
+nav .search-icon i, 
+nav .search-icon, 
+nav .search-icon * {
+    background-color: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+}
+
+/* Campo de Busca Escondido */
+nav .search-box {
+    display: none;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+nav.active .search-box {
+    display: flex;
+}
+
+nav .search-box input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #B100FF;
+    border-radius: 5px;
+    outline: none;
+}
+
+nav .search-box button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #B100FF;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav .search-box button:hover {
+    background-color: #A000E0;
+}
+
+/* Social Icons */
+nav .social-icon {
+    display: flex;
+    background-color: #fff;
+    align-items: center;
+    gap: 20px; /* Espaço entre os ícones */
+}
+
+nav .social-icon .icon {
+    display: flex;
+    align-items: center;
+    color: #000;
+    background-color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+nav .social-icon .icon:hover {
+    color: #B100FF;
+    background-color: #fff;
+}
+
+nav .social-icon i {
+    margin-right: 8px;
+    background-color: #fff;
+    font-size: 20px;
+}
+
+nav .social-icon span {
+    display: inline; /* Garante que o texto seja exibido ao lado do ícone */
+    background-color: #fff;
+    margin-left: 8px; /* Espaço entre o ícone e o texto */
+}

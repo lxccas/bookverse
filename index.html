@@ -10,14 +10,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+        <link rel="icon" href="image/bluebook.png" type="image/svg+xml">
 
 <body>
 
     <section>
 
         <nav>
-            <div class="logo">
+            <a href="index.html" class="logo">
                 <span class="logo-icon">
                     <!-- SVG do livro -->
                     <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="40" width="40" xmlns="http://www.w3.org/2000/svg">
@@ -25,16 +25,16 @@
                     </svg>
                 </span>
                 <span class="logo-text">Book Verse</span>
-            </div>
+            </a>
 
             <div class="sections">
-                <a href="#">Ficção Científica</a>
-                <a href="#">Fantasia</a>
-                <a href="#">Poesia</a>
-                <a href="#">Policial</a>
-                <a href="#">Romance</a>
-                <a href="#">Suspense</a>
-                <a href="#">Terror</a>
+                <a href="pages/livros1.html">Ficção Científica</a>
+                <a href="pages/livros2.html">Fantasia</a>
+                <a href="pages/livros3.html">Poesia</a>
+                <a href="pages/livros4.html">Policial</a>
+                <a href="pages/livros5.html">Romance</a>
+                <a href="pages/livros6.html">Suspense</a>
+                <a href="pages/livros7.html">Terror</a>
             </div>
 
             <label for="search-toggle" class="search-icon">
@@ -162,11 +162,28 @@
 <!-- Seções de Detalhes -->
 <div id="details1" class="book_details">
     <a href="#" class="close">×</a>
-    <h2>Os Códigos do Milhão</h2>
-    <p><strong>Autor:</strong> Pablo Marçal</p>
-    <p><strong>Categoria:</strong> Evolução Pessoal</p>
-    <p><strong>Preço:</strong> R$71.60 <sub><del>R$120.00</del></sub></p>
-    <p><strong>Descrição:</strong> Uma descrição detalhada do livro.</p>
+    <div class="book_image">
+        <h2>Sobre o livro</h2>
+        <img src="image/book_16.jpg" alt="Imagem do Livro">
+    </div>
+    <div class="book_info">
+        <div class="info_item">
+            <p class="info_value">R$71.60</p>
+            <p class="info_label">Preço</p>
+        </div>
+        <div class="info_item">
+            <p class="info_value">250</p>
+            <p class="info_label">Páginas</p>
+        </div>
+        <div class="info_item">
+            <p class="info_value">★★★★☆</p>
+            <p class="info_label">Avaliações</p>
+        </div>
+    </div>
+    <p>Uma descrição detalhada do livro.</p>
+    <button class="add_to_cart">
+        <i class="fa-solid fa-bag-shopping"></i> Adicionar à Sacola
+    </button>
 </div>
 
 <!---Banner-->

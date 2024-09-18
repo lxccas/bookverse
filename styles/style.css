@@ -23,6 +23,7 @@ nav {
 nav .logo {
     display: flex;
     align-items: center;
+    text-decoration: none;
     background-color: #fff;
     gap: 10px; /* Espaço entre o ícone e o texto */
 }
@@ -30,7 +31,7 @@ nav .logo {
 nav .logo .logo-icon {
     font-size: 40px; /* Tamanho do ícone */
     color: #0066ff; /* Cor azul para o ícone */
-    background-color: #fff;
+    background-color: transparent;
 }
 
 nav .logo .logo-text {
@@ -105,7 +106,6 @@ nav .sections a {
 
 nav .sections a:hover {
     color: #B100FF;
-    background-color: rgba(177, 0, 255, 0.1);
     border-radius: 5px;
 }
 
@@ -376,13 +376,16 @@ nav .social-icon span {
     right: 0;
     width: 50%;
     height: 100%;
-    background-color: #fff;
+    background-color: rgb(21, 30, 41); /* Fundo escuro */
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
     padding: 20px;
     overflow-y: auto;
     z-index: 1000;
+    box-sizing: border-box;
+    color: #fff; /* Cor do texto */
 }
 
+/* Exibe a seção de detalhes quando o ID correspondente é o alvo */
 .book_details:target {
     display: block;
 }
@@ -391,13 +394,92 @@ nav .social-icon span {
     position: absolute;
     top: 20px;
     right: 20px;
-    font-size: 1.5em;
+    font-size: 2.5em;
     text-decoration: none;
-    color: #6a1b9a;
+    color: #fff;
+    background-color: rgb(21, 30, 41);
 }
 
 .book_details .close:hover {
     color: #4a148c;
+}
+
+.book_image {
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: transparent;
+}
+
+.book_image img {
+    max-width: 100%;
+    height: auto;
+    max-height: 300px; /* Ajuste a altura máxima conforme necessário */
+}
+
+.book_details h2 {
+    font-size: 1.8em; /* Ajuste o tamanho da fonte conforme necessário */
+    margin-bottom: 10px;
+    background-color: transparent; /* Fundo transparente */
+    color: #fff; /* Cor do texto */
+}
+
+.book_info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 20px;
+    background-color: transparent;
+}
+
+.info_item {
+    text-align: center;
+    background-color: transparent; /* Fundo transparente */
+}
+
+.info_value {
+    font-size: 1.2em; /* Tamanho do valor */
+    margin: 0;
+    background-color: transparent; /* Fundo transparente */
+    color: #fff; /* Cor do texto */
+}
+
+.info_label {
+    font-size: 0.9em; /* Tamanho do rótulo */
+    margin: 0;
+    color: rgb(146, 144, 150); /* Cor do rótulo */
+    background-color: transparent; /* Fundo transparente */
+}
+
+.book_details p {
+    font-size: 1em; /* Ajuste o tamanho da fonte conforme necessário */
+    text-align: center;
+    margin-bottom: 10px;
+    background-color: transparent; /* Fundo transparente */
+    color: #fff; /* Cor do texto */
+}
+
+.add_to_cart {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #6a1b9a;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.5em;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.add_to_cart i {
+    margin-right: 5px;
+    background-color: transparent;
+}
+
+.add_to_cart:hover {
+    background-color: #4a148c;
 }
 
 /* Banner */
