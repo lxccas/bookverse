@@ -1,0 +1,152 @@
+/* Login Page */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #3b3b3b;
+    background-color: #f5f5f5; /* Cor de fundo suave */
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-image: url('https://example.com/library-background.jpg'); /* Substitua pelo URL da imagem de fundo desejada */
+    background-size: cover;
+    background-position: center;
+}
+
+.formLogin, .formRegister, .formForgotPassword {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    gap: 15px; /* Ajuste do espaço entre elementos */
+    width: 100%;
+    max-width: 400px;
+}
+
+.formLogin h1, .formRegister h1, .formForgotPassword h1 {
+    margin: 0;
+    font-weight: 500;
+    font-size: 2em; /* Ajuste o tamanho do título */
+    color: #2a2a2a; /* Cor do título */
+}
+
+.formLogin p, .formRegister p, .formForgotPassword p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.formLogin input, .formRegister input, .formForgotPassword input {
+    padding: 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    transition: border-color 160ms linear;
+    outline: none;
+}
+
+.formLogin input:focus, .formRegister input:focus, .formForgotPassword input:focus {
+    border-color: #B100FF; /* Cor da borda ao focar no input */
+}
+
+.formLogin label, .formRegister label, .formForgotPassword label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #3b3b3b;
+}
+
+.formLogin a, .formRegister a, .formForgotPassword a {
+    display: inline-block;
+    margin-bottom: 15px;
+    font-size: 13px;
+    color: #3b3b3b;
+    transition: color 160ms linear;
+}
+
+.formLogin a:hover, .formRegister a:hover, .formForgotPassword a:hover {
+    color: #B100FF; /* Cor do link em hover */
+}
+
+.btn {
+    background-color: #B100FF; /* Cor do botão */
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 160ms linear, transform 160ms linear;
+    cursor: pointer;
+    padding: 12px;
+    text-align: center;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    background-color: #9e00d6; /* Cor do botão em hover */
+}
+
+/* Estilos para o Modal */
+.modal {
+    display: none; /* Esconde o modal por padrão */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo escurecida */
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #B100FF; /* Cor ao passar o mouse sobre o botão de fechar */
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.error {
+    color: #f72585;
+    font-size: 12px;
+}
+
+/* Estilo para a página principal */
+.mainContent {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    text-align: center;
+    margin: 20px auto;
+}

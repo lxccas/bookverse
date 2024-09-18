@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../styles/login.css">
+</head>
+<body>
+    <div class="page">
+        <!-- Página de Login -->
+        <div id="loginSection">
+            <form id="loginForm" method="POST" class="formLogin">
+                <h1>BookVerse</h1>
+                <p>Digite os seus dados de acesso no campo abaixo.</p>
+                <label for="loginEmail">E-mail</label>
+                <input type="email" id="loginEmail" placeholder="Digite seu e-mail" required />
+                <div id="loginEmailError" class="error"></div>
+                <label for="loginPassword">Senha</label>
+                <input type="password" id="loginPassword" placeholder="Digite sua Senha" required />
+                <div id="loginPasswordError" class="error"></div>
+                <a href="#" onclick="showForgotPassword()">Esqueci minha senha</a>
+                <input type="submit" value="Acessar" class="btn" />
+                <p>Não tem uma conta? <a href="../pages/registro.html" onclick="showRegisterForm()">Cadastre-se</a></p>
+            </form>
+        </div>
+
+        <!-- Página de Cadastro -->
+        <div id="registerSection" style="display: none;">
+            <form id="registerForm" method="POST" class="formRegister">
+                <h1>Cadastro</h1>
+                <p>Preencha os campos abaixo para criar uma conta.</p>
+                <label for="registerName">Nome</label>
+                <input type="text" id="registerName" placeholder="Digite seu nome" required />
+                <label for="registerEmail">E-mail</label>
+                <input type="email" id="registerEmail" placeholder="Digite seu e-mail" required />
+                <div id="registerEmailError" class="error"></div>
+                <label for="registerPassword">Senha</label>
+                <input type="password" id="registerPassword" placeholder="Digite sua Senha" required />
+                <div id="registerPasswordError" class="error"></div>
+                <input type="submit" value="Cadastrar" class="btn" />
+                <p>Já tem uma conta? <a href="#" onclick="showLoginForm()">Faça login</a></p>
+            </form>
+        </div>
+
+        <!-- Página de Redefinição de Senha -->
+        <div id="forgotPasswordSection" style="display: none;">
+            <form id="forgotPasswordForm" method="POST" class="formForgotPassword">
+                <h1>Esqueceu a Senha</h1>
+                <p>Digite seu e-mail para receber instruções para redefinir a senha.</p>
+                <label for="forgotPasswordEmail">E-mail</label>
+                <input type="email" id="forgotPasswordEmail" placeholder="Digite seu e-mail" required />
+                <div id="forgotPasswordError" class="error"></div>
+                <input type="submit" value="Enviar Instruções" class="btn" />
+                <p><a href="#" onclick="showLoginForm()">Voltar ao login</a></p>
+            </form>
+        </div>
+
+    <!-- Modal de Sucesso do Login -->
+    <div id="loginSuccessModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('loginSuccessModal')">&times;</span>
+            <p>Você logou com sucesso!</p>
+        </div>
+    </div>
+
+    <!-- Modal de Sucesso do Cadastro -->
+    <div id="registerSuccessModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('registerSuccessModal')">&times;</span>
+            <p>Cadastro realizado com sucesso!</p>
+        </div>
+    </div>
+
+    <!-- Modal de Envio de Senha -->
+    <div id="forgotPasswordSuccessModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('forgotPasswordSuccessModal')">&times;</span>
+            <p>Instruções para redefinir a senha foram enviadas para o seu e-mail!</p>
+        </div>
+    </div>
+
+    <!-- Inclua o script JavaScript aqui -->
+    <script src="script.js"></script>
+</body>
+</html>

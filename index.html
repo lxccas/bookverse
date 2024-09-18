@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BookVerse</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -18,447 +18,332 @@
 
         <nav>
             <div class="logo">
-                <img src="image/logo1.png" alt="Logo">
+                <span class="logo-icon">
+                    <!-- SVG do livro -->
+                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="40" width="40" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M319.61 20.654c13.145 33.114 13.144 33.115-5.46 63.5 33.114-13.145 33.116-13.146 63.5 5.457-13.145-33.114-13.146-33.113 5.457-63.498-33.114 13.146-33.113 13.145-63.498-5.459zM113.024 38.021c-11.808 21.04-11.808 21.04-35.724 24.217 21.04 11.809 21.04 11.808 24.217 35.725 11.808-21.04 11.808-21.04 35.724-24.217-21.04-11.808-21.04-11.808-24.217-35.725zm76.55 56.184c-.952 50.588-.95 50.588-41.991 80.18 50.587.95 50.588.95 80.18 41.99.95-50.588.95-50.588 41.99-80.18-50.588-.95-50.588-.95-80.18-41.99zm191.177 55.885c-.046 24.127-.048 24.125-19.377 38.564 24.127.047 24.127.046 38.566 19.375.047-24.126.046-24.125 19.375-38.564-24.126-.047-24.125-.046-38.564-19.375zm-184.086 83.88c-1.191.024-2.36.07-3.492.134-18.591 1.064-41.868 8.416-77.445 22.556L76.012 433.582c78.487-20.734 132.97-21.909 170.99-4.615V247.71c-18.076-8.813-31.79-13.399-46.707-13.737a91.166 91.166 0 0 0-3.629-.002zm122.686 11.42c-2.916-.026-5.81.011-8.514.098-12.81.417-27.638 2.215-45.84 4.522V427.145c43.565-7.825 106.85-4.2 171.244 7.566l-39.78-177.197c-35.904-8.37-56.589-11.91-77.11-12.123zm2.289 16.95c18.889.204 36.852 2.768 53.707 5.02l4.437 16.523c-23.78-3.75-65.966-4.906-92.467-.98l-.636-17.805c11.959-2.154 23.625-2.88 34.959-2.758zm-250.483 4.658l-10.617 46.004h24.094l10.326-46.004H71.158zm345.881 0l39.742 177.031 2.239 9.973 22.591-.152-40.855-186.852h-23.717zm-78.857 57.82c16.993.026 33.67.791 49.146 2.223l3.524 17.174c-32.645-3.08-72.58-2.889-102.995 0l-.709-17.174c16.733-1.533 34.04-2.248 51.034-2.223zm-281.793 6.18l-6.924 30.004h24.394l6.735-30.004H56.389zm274.418 27.244c4.656.021 9.487.085 14.716.203l2.555 17.498c-19.97-.471-47.115.56-59.728 1.05l-.7-17.985c16.803-.493 29.189-.828 43.157-.766zm41.476.447c8.268.042 16.697.334 24.121.069l2.58 17.74c-8.653-.312-24.87-.83-32.064-.502l-2.807-17.234a257.25 257.25 0 0 1 8.17-.073zm-326.97 20.309l-17.985 77.928 25.035-.17 17.455-77.758H45.313zm303.164 11.848c19.608-.01 38.66.774 56.449 2.572l2.996 20.787c-34.305-4.244-85.755-7.697-119.1-3.244l-.14-17.922c20.02-1.379 40.186-2.183 59.795-2.193zm-166.606 44.05c-30.112.09-67.916 6.25-115.408 19.76l-7.22 2.053 187.759-1.27v-6.347c-16.236-9.206-37.42-14.278-65.13-14.196zm134.41 6.174c-19.63.067-37.112 1.439-51.283 4.182v10.064l177.594-1.203c-44.322-8.634-89.137-13.17-126.31-13.043zM26 475v18h460v-18H26z"></path>
+                    </svg>
+                </span>
+                <span class="logo-text">Book Verse</span>
             </div>
 
+            <div class="sections">
+                <a href="#">Ficção Científica</a>
+                <a href="#">Fantasia</a>
+                <a href="#">Poesia</a>
+                <a href="#">Policial</a>
+                <a href="#">Romance</a>
+                <a href="#">Suspense</a>
+                <a href="#">Terror</a>
+            </div>
+
+            <label for="search-toggle" class="search-icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </label>
+    
             <div class="search-box">
-                <select id="search-options">
-                    <option value="titulo">Título</option>
-                    <option value="titulo-autor">Título e Autor</option>
-                    <option value="editora">Editora</option>
-                    <option value="isbn">ISBN</option>
-                </select>
                 <input type="text" placeholder="O que você está procurando?">
                 <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
 
             <div class="social-icon">
-                <a href="#" class="icon"><i class="fa-solid fa-heart"></i><span>Minhas Listas</span></a>
-                <a href="#" class="icon"><i class="fa-solid fa-user"></i><span>Entrar</span></a>
-                <a href="#" class="icon"><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href="#" class="icon"><i class="fa-solid fa-bag-shopping"></i></a>
+                <a href="pages/login.html" class="fa-solid fa-user" target="_blank" rel="noopener noreferrer"></i></a>
             </div>
         </nav>
 
 
-        <div class="main">
-
-            <div class="main_tag">
-                <h1>BEM-VINDO AO<br><span>BOOK VERSE</span></h1>
-                <p>
-                    Explore o fascinante universo dos livros em nossa plataforma. Aqui você encontrará uma vasta seleção
-                    de títulos, recomendações personalizadas e recursos para aprimorar sua experiência de leitura.
-                    Descubra novos mundos e histórias que irão cativar sua imaginação.
-                </p>
-                <a href="#" class="main_btn">Leia Mais</a>
+        <section class="promo">
+            <div class="promo-text">
+                <h1>Grandes descontos em livros infantis</h1>
+                <p>Explore nossa seleção especial de livros infantis com descontos incríveis para todas as idades! De clássicos atemporais a novas aventuras emocionantes, temos algo para cada pequeno leitor. Aproveite preços reduzidos e torne a hora da leitura ainda mais divertida e acessível para seus filhos. Não perca a chance de enriquecer a biblioteca das crianças com histórias que estimulam a imaginação e a aprendizagem.</p>
+                <a href="pages/livros.html" class="promo-btn">Venha conferir</a>
             </div>
-
-            <div class="main_img">
-                <img src="image/table.png">
+            <div class="promo-image">
+                <div class="promo-circle"></div>
+                <img src="image/young-girl-student.png" alt="kid">
             </div>
-
-        </div>
+        </section>
 
     </section>
 
-    <!-- Services Section -->
-    <div class="services">
+    <!-- Livros em Destaque -->
+<div id="books" class="featured_books">
+    <h1>Livros em Destaques</h1>
+    <div class="featured_books_container">
+        <div class="featured_books_box">
+            <!-- Cards dos Livros em Destaque -->
+            <a href="#details1" class="featured_book_card">
+                <div class="featured_book_img">
+                    <img src="image/book_16.jpg" alt="Book 1">
+                </div>
+                <div class="featured_book_tag">
+                    <h2>Os Códigos do Milhão</h2>
+                    <p class="writer">Pablo Marçal</p>
+                    <div class="categories">Evolução Pessoal</div>
+                    <p class="book_price">R$71.60<sub><del>R$120.00</del></sub></p>
+                </div>
+            </a>
 
-        <div class="services_box">
-            <div class="services_card">
-                <i class="fa-solid fa-truck-fast"></i>
-                <h3>Entrega Rápida</h3>
-                <p>
-                    Receba seus pedidos com agilidade e eficiência, garantindo que seus produtos cheguem até você no
-                    menor tempo possível.
-                </p>
+            <!-- Mais livros em destaque aqui -->
+        </div>
+    </div>
+</div>
+
+<!-- Populares de Ação -->
+<div id="action" class="featured_books">
+    <h1>Populares de Ação</h1>
+    <div class="featured_books_container">
+        <div class="featured_books_box">
+            <!-- Cards dos Livros Populares de Ação -->
+            <div class="featured_book_card">
+                <div class="featured_book_img">
+                    <img src="image/book_2.jpg" alt="Book 2">
+                </div>
+                <div class="featured_book_tag">
+                    <h2>Nome do Livro</h2>
+                    <p class="writer">Pessoa</p>
+                    <div class="categories">Categoria</div>
+                    <p class="book_price">R$25,50<sub><del>R$28,50</del></sub></p>
+                    
+                </div>
             </div>
+            <!-- Mais livros populares de ação aqui -->
+        </div>
+    </div>
+</div>
 
-            <div class="services_card">
-                <i class="fa-solid fa-headset"></i>
-                <h3>Serviços 24/7</h3>
-                <p>
-                    Oferecemos suporte ao cliente 24 horas por dia, 7 dias por semana, para atender suas dúvidas e
-                    necessidades a qualquer momento.
-                </p>
+<!-- Populares de Romance Policial -->
+<div id="crime" class="featured_books">
+    <h1>Populares de Romance Policial</h1>
+    <div class="featured_books_container">
+        <div class="featured_books_box">
+            <!-- Cards dos Livros Populares de Romance Policial -->
+            <div class="featured_book_card">
+                <div class="featured_book_img">
+                    <img src="image/book_3.jpg" alt="Book 3">
+                </div>
+                <div class="featured_book_tag">
+                    <h2>Nome do Livro</h2>
+                    <p class="writer">Pessoa</p>
+                    <div class="categories">Categoria</div>
+                    <p class="book_price">R$25,50<sub><del>R$28,50</del></sub></p>
+                    
+                </div>
             </div>
+            <!-- Mais livros populares de romance policial aqui -->
+        </div>
+    </div>
+</div>
 
-            <div class="services_card">
-                <i class="fa-solid fa-tag"></i>
-                <h3>Melhor Negociação</h3>
-                <p>
-                    Aproveite as melhores ofertas e preços competitivos, garantindo sempre um ótimo custo-benefício em
-                    suas compras.
-                </p>
+<!-- Populares de Terror -->
+<div id="horror" class="featured_books">
+    <h1>Populares de Terror</h1>
+    <div class="featured_books_container">
+        <div class="featured_books_box">
+            <!-- Cards dos Livros Populares de Terror -->
+            <div class="featured_book_card">
+                <div class="featured_book_img">
+                    <img src="image/book_4.jpg" alt="Book 4">
+                </div>
+                <div class="featured_book_tag">
+                    <h2>Nome do Livro</h2>
+                    <p class="writer">Pessoa</p>
+                    <div class="categories">Categoria</div>
+                    <p class="book_price">R$25,50<sub><del>R$28,50</del></sub></p>
+                    
+                </div>
             </div>
+            <!-- Mais livros populares de terror aqui -->
+        </div>
+    </div>
+</div>
 
-            <div class="services_card">
-                <i class="fa-solid fa-lock"></i>
-                <h3>Pagamento Seguro</h3>
-                <p>
-                    Suas transações são protegidas com as mais recentes tecnologias de segurança, oferecendo uma
-                    experiência de compra tranquila.
-                </p>
+<!-- Seções de Detalhes -->
+<div id="details1" class="book_details">
+    <a href="#" class="close">×</a>
+    <h2>Os Códigos do Milhão</h2>
+    <p><strong>Autor:</strong> Pablo Marçal</p>
+    <p><strong>Categoria:</strong> Evolução Pessoal</p>
+    <p><strong>Preço:</strong> R$71.60 <sub><del>R$120.00</del></sub></p>
+    <p><strong>Descrição:</strong> Uma descrição detalhada do livro.</p>
+</div>
+
+<!---Banner-->
+<div class="explore-box">
+    <h2 class="explore-title">
+        Comece a explorar agora para ler<br> os clássicos mundiais!</h2>
+    <span class="explore-quote">
+            “Clássica é a obra que tem dimensão universal: consegue atravessar gerações,<br>
+            fronteiras e nacionalidades, sem perder as suas características.” - Renato Rocha
+    </span>        <button class="explore-button">Ver todos</button>
+    <img src="image/young-girl-student-2.png" class="explore-image"> <!-- Adicione esta linha -->
+</div>
+
+
+<!-- Populares de Poesia -->
+<div id="poetry" class="featured_books">
+    <h1>Populares de Poesia</h1>
+    <div class="featured_books_container">
+        <div class="featured_books_box">
+            <!-- Cards dos Livros Populares de Poesia -->
+            <div class="featured_book_card">
+                <div class="featured_book_img">
+                    <img src="image/book_5.jpg" alt="Book 5">
+                </div>
+                <div class="featured_book_tag">
+                    <h2>Nome do Livro</h2>
+                    <p class="writer">Pessoa</p>
+                    <div class="categories">Categoria</div>
+                    <p class="book_price">R$25,50<sub><del>R$28,50</del></sub></p>
+                    
+                </div>
+            </div>
+            <!-- Mais livros populares de poesia aqui -->
+        </div>
+    </div>
+</div>
+
+<!-- Populares de Auto Ajuda -->
+<div id="self-help" class="featured_books">
+    <h1>Populares de Auto Ajuda</h1>
+    <div class="featured_books_container">
+        <div class="featured_books_box">
+            <!-- Cards dos Livros Populares de Auto Ajuda -->
+            <div class="featured_book_card">
+                <div class="featured_book_img">
+                    <img src="image/book_6.jpg" alt="Book 6">
+                </div>
+                <div class="featured_book_tag">
+                    <h2>Nome do Livro</h2>
+                    <p class="writer">Pessoa</p>
+                    <div class="categories">Categoria</div>
+                    <p class="book_price">R$25,50<sub><del>R$28,50</del></sub></p>
+                    
+                </div>
+            </div>
+            <!-- Mais livros populares de auto ajuda aqui -->
+        </div>
+    </div>
+</div>
+
+<!-- Autores Populares -->
+<div class="authors">
+    <h1>Autores Populares</h1>
+
+    <div class="author_box">
+        <div class="author_card">
+            <div class="author_img">
+                <img src="image/review_1.png" alt="Autor 1">
+            </div>
+            <div class="author_info">
+                <h2>Autor 1</h2>
+                <p>Descrição breve sobre o autor. Pode incluir informações sobre suas principais obras ou contribuições.</p>
             </div>
         </div>
 
-    </div>
-
-    <!-- Books -->
-    <div id="books" class="featured_books">
-        <h1>Livros em Destaques</h1>
-        <div class="featured_books_container">
-            <div class="featured_books_box">
-
-                <div class="featured_book_card">
-                    <div class="featured_book_img">
-                        <img src="image/book_16.jpg" alt="Book 1">
-                    </div>
-                    <div class="featured_book_tag">
-                        <h2>Os Códigos do Milhão</h2>
-                        <p class="writer">Pablo Marçal</p>
-                        <div class="categories">Evolução Pessoal</div>
-                        <p class="book_price">R$71.60<sub><del>R$120.00</del></sub></p>
-                        <a href="#" class="f_btn">Leia Mais</a>
-                    </div>
-                </div>
-
-                <div class="featured_book_card">
-                    <div class="featured_book_img">
-                        <img src="image/book_2.jpg" alt="Book 2">
-                    </div>
-                    <div class="featured_book_tag">
-                        <h2>Nome do Livro</h2>
-                        <p class="writer">Pessoa</p>
-                        <div class="categories">Categoria</div>
-                        <p class="book_price">R$25,50<sub><del>R$28,50</del></sub></p>
-                        <a href="#" class="f_btn">Leia Mais</a>
-                    </div>
-                </div>
-
-                <div class="featured_book_card">
-                    <div class="featured_book_img">
-                        <img src="image/book_3.jpg" alt="Book 3">
-                    </div>
-                    <div class="featured_book_tag">
-                        <h2>Nome do Livro</h2>
-                        <p class="writer">Pessoa</p>
-                        <div class="categories">Categoria</div>
-                        <p class="book_price">R$25,50<sub><del>R$28,50</del></sub></p>
-                        <a href="#" class="f_btn">Leia Mais</a>
-                    </div>
-                </div>
-
-                <div class="featured_book_card">
-                    <div class="featured_book_img">
-                        <img src="image/book_4.jpg" alt="Book 4">
-                    </div>
-                    <div class="featured_book_tag">
-                        <h2>Nome do Livro</h2>
-                        <p class="writer">Pessoa</p>
-                        <div class="categories">Categoria</div>
-                        <p class="book_price">R$25,50<sub><del>R$28,50</del></sub></p>
-                        <a href="#" class="f_btn">Leia Mais</a>
-                    </div>
-                </div>
-
-                <div class="featured_book_card">
-                    <div class="featured_book_img">
-                        <img src="image/book_5.jpg" alt="Book 5">
-                    </div>
-                    <div class="featured_book_tag">
-                        <h2>Nome do Livro</h2>
-                        <p class="writer">Pessoa</p>
-                        <div class="categories">Categoria</div>
-                        <p class="book_price">R$25,50<sub><del>R$28,50</del></sub></p>
-                        <a href="#" class="f_btn">Leia Mais</a>
-                    </div>
-                </div>
-
-                <div class="featured_book_card">
-                    <div class="featured_book_img">
-                        <img src="image/book_6.jpg" alt="Book 6">
-                    </div>
-                    <div class="featured_book_tag">
-                        <h2>Nome do Livro</h2>
-                        <p class="writer">Pessoa</p>
-                        <div class="categories">Categoria</div>
-                        <p class="book_price">R$25,50<sub><del>R$28,50</del></sub></p>
-                        <a href="#" class="f_btn">Leia Mais</a>
-                    </div>
-                </div>
-
-                <div class="featured_book_card">
-                    <div class="featured_book_img">
-                        <img src="image/book_7.png" alt="Book 7">
-                    </div>
-                    <div class="featured_book_tag">
-                        <h2>Nome do Livro</h2>
-                        <p class="writer">Pessoa</p>
-                        <div class="categories">Categoria</div>
-                        <p class="book_price">R$25,50<sub><del>R$28,50</del></sub></p>
-                        <a href="#" class="f_btn">Leia Mais</a>
-                    </div>
-                </div>
-
-                <div class="featured_book_card">
-                    <div class="featured_book_img">
-                        <img src="image/book_8.png" alt="Book 8">
-                    </div>
-                    <div class="featured_book_tag">
-                        <h2>Nome do Livro</h2>
-                        <p class="writer">Pessoa</p>
-                        <div class="categories">Categoria</div>
-                        <p class="book_price">R$25,50<sub><del>R$28,50</del></sub></p>
-                        <a href="#" class="f_btn">Leia Mais</a>
-                    </div>
-                </div>
-
-                <div class="featured_book_card">
-                    <div class="featured_book_img">
-                        <img src="image/book_9.jpg" alt="Book 9">
-                    </div>
-                    <div class="featured_book_tag">
-                        <h2>Nome do Livro</h2>
-                        <p class="writer">Pessoa</p>
-                        <div class="categories">Categoria</div>
-                        <p class="book_price">R$25,50<sub><del>R$28,50</del></sub></p>
-                        <a href="#" class="f_btn">Leia Mais</a>
-                    </div>
-                </div>
-
-                <div class="featured_book_card">
-                    <div class="featured_book_img">
-                        <img src="image/book_10.png" alt="Book 10">
-                    </div>
-                    <div class="featured_book_tag">
-                        <h2>Nome do Livro</h2>
-                        <p class="writer">Pessoa</p>
-                        <div class="categories">Categoria</div>
-                        <p class="book_price">R$25,50<sub><del>R$28,50</del></sub></p>
-                        <a href="#" class="f_btn">Leia Mais</a>
-                    </div>
-                </div>
-
-                <!-- Continuação de livros se precisar -->
-
+        <div class="author_card">
+            <div class="author_img">
+                <img src="image/review_2.png" alt="Autor 2">
+            </div>
+            <div class="author_info">
+                <h2>Autor 2</h2>
+                <p>Descrição breve sobre o autor. Pode incluir informações sobre suas principais obras ou contribuições.</p>
             </div>
         </div>
-    </div>
 
-    <!--Arrivals-->
-
-    <div id="new_arrivals" class="arrivals">
-        <h1>Novos Lançamentos</h1>
-
-        <div class="arrivals_box">
-
-            <div class="arrivals_card">
-                <div class="arrivals_image">
-                    <img src="image/arrival_1.jpg">
-                </div>
-                <div class="arrivals_tag">
-                    <p>Novo Livro Lançado</p>
-                    <div class="arrivals_icon">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star-half-stroke"></i>
-                    </div>
-                    <a href="#" class="arrivals_btn">Leia Mais</a>
-                </div>
+        <div class="author_card">
+            <div class="author_img">
+                <img src="image/review_3.png" alt="Autor 2">
             </div>
-
-            <div class="arrivals_card">
-                <div class="arrivals_image">
-                    <img src="image/arrival_2.jpg">
-                </div>
-                <div class="arrivals_tag">
-                    <p>Novo Livro Lançado</p>
-                    <div class="arrivals_icon">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star-half-stroke"></i>
-                    </div>
-                    <a href="#" class="arrivals_btn">Leia Mais</a>
-                </div>
+            <div class="author_info">
+                <h2>Autor 3</h2>
+                <p>Descrição breve sobre o autor. Pode incluir informações sobre suas principais obras ou contribuições.</p>
             </div>
-
-            <div class="arrivals_card">
-                <div class="arrivals_image">
-                    <img src="image/arrival_3.jpg">
-                </div>
-                <div class="arrivals_tag">
-                    <p>Novo Livro Lançado</p>
-                    <div class="arrivals_icon">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star-half-stroke"></i>
-                    </div>
-                    <a href="#" class="arrivals_btn">Leia Mais</a>
-                </div>
-            </div>
-
-            <div class="arrivals_card">
-                <div class="arrivals_image">
-                    <img src="image/arrival_4.jpg">
-                </div>
-                <div class="arrivals_tag">
-                    <p>Novo Livro Lançado</p>
-                    <div class="arrivals_icon">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star-half-stroke"></i>
-                    </div>
-                    <a href="#" class="arrivals_btn">Leia Mais</a>
-                </div>
-            </div>
-
-            <div class="arrivals_card">
-                <div class="arrivals_image">
-                    <img src="image/arrival_5.jpg">
-                </div>
-                <div class="arrivals_tag">
-                    <p>Novo Livro Lançado</p>
-                    <div class="arrivals_icon">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star-half-stroke"></i>
-                    </div>
-                    <a href="#" class="arrivals_btn">Leia Mais</a>
-                </div>
-            </div>
-
-            <div class="arrivals_card">
-                <div class="arrivals_image">
-                    <img src="image/arrival_6.jpg">
-                </div>
-                <div class="arrivals_tag">
-                    <p>Novo Livro Lançado</p>
-                    <div class="arrivals_icon">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star-half-stroke"></i>
-                    </div>
-                    <a href="#" class="arrivals_btn">Leia Mais</a>
-                </div>
-            </div>
-
-            <div class="arrivals_card">
-                <div class="arrivals_image">
-                    <img src="image/arrival_7.jpg">
-                </div>
-                <div class="arrivals_tag">
-                    <p>Novo Livro Lançado</p>
-                    <div class="arrivals_icon">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star-half-stroke"></i>
-                    </div>
-                    <a href="#" class="arrivals_btn">Leia Mais</a>
-                </div>
-            </div>
-
-            <div class="arrivals_card">
-                <div class="arrivals_image">
-                    <img src="image/arrival_8.webp">
-                </div>
-                <div class="arrivals_tag">
-                    <p>Novo Livro Lançado</p>
-                    <div class="arrivals_icon">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star-half-stroke"></i>
-                    </div>
-                    <a href="#" class="arrivals_btn">Leia Mais</a>
-                </div>
-            </div>
-
-            <div class="arrivals_card">
-                <div class="arrivals_image">
-                    <img src="image/arrival_9.jpg">
-                </div>
-                <div class="arrivals_tag">
-                    <p>Novo Livro Lançado</p>
-                    <div class="arrivals_icon">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star-half-stroke"></i>
-                    </div>
-                    <a href="#" class="arrivals_btn">Leia Mais</a>
-                </div>
-            </div>
-
-            <div class="arrivals_card">
-                <div class="arrivals_image">
-                    <img src="image/arrival_10.jpg">
-                </div>
-                <div class="arrivals_tag">
-                    <p>Novo Livro Lançado</p>
-                    <div class="arrivals_icon">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star-half-stroke"></i>
-                    </div>
-                    <a href="#" class="arrivals_btn">Leia Mais</a>
-                </div>
-            </div>
-
-            <div class="arrivals_card">
-                <div class="arrivals_image">
-                    <img src="image/arrival_11.jpg">
-                </div>
-                <div class="arrivals_tag">
-                    <p>Novo Livro Lançado</p>
-                    <div class="arrivals_icon">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star-half-stroke"></i>
-                    </div>
-                    <a href="#" class="arrivals_btn">Leia Mais</a>
-                </div>
-            </div>
-
-            <div class="arrivals_card">
-                <div class="arrivals_image">
-                    <img src="image/arrival_12.jpg">
-                </div>
-                <div class="arrivals_tag">
-                    <p>Novo Livro Lançado</p>
-                    <div class="arrivals_icon">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star-half-stroke"></i>
-                    </div>
-                    <a href="#" class="arrivals_btn">Leia Mais</a>
-                </div>
-            </div>
-
         </div>
 
+        <div class="author_card">
+            <div class="author_img">
+                <img src="image/review_4.png" alt="Autor 2">
+            </div>
+            <div class="author_info">
+                <h2>Autor 4</h2>
+                <p>Descrição breve sobre o autor. Pode incluir informações sobre suas principais obras ou contribuições.</p>
+            </div>
+        </div>
+
+        <div class="author_card">
+            <div class="author_img">
+                <img src="image/review_4.png" alt="Autor 2">
+            </div>
+            <div class="author_info">
+                <h2>Autor 4</h2>
+                <p>Descrição breve sobre o autor. Pode incluir informações sobre suas principais obras ou contribuições.</p>
+            </div>
+        </div>
+
+        <div class="author_card">
+            <div class="author_img">
+                <img src="image/review_4.png" alt="Autor 2">
+            </div>
+            <div class="author_info">
+                <h2>Autor 4</h2>
+                <p>Descrição breve sobre o autor. Pode incluir informações sobre suas principais obras ou contribuições.</p>
+            </div>
+        </div>
+
+        <div class="author_card">
+            <div class="author_img">
+                <img src="image/review_4.png" alt="Autor 2">
+            </div>
+            <div class="author_info">
+                <h2>Autor 4</h2>
+                <p>Descrição breve sobre o autor. Pode incluir informações sobre suas principais obras ou contribuições.</p>
+            </div>
+        </div>
+
+        <div class="author_card">
+            <div class="author_img">
+                <img src="image/review_4.png" alt="Autor 2">
+            </div>
+            <div class="author_info">
+                <h2>Autor 4</h2>
+                <p>Descrição breve sobre o autor. Pode incluir informações sobre suas principais obras ou contribuições.</p>
+            </div>
+        </div>
+
+        <div class="author_card">
+            <div class="author_img">
+                <img src="image/review_4.png" alt="Autor 2">
+            </div>
+            <div class="author_info">
+                <h2>Autor 4</h2>
+                <p>Descrição breve sobre o autor. Pode incluir informações sobre suas principais obras ou contribuições.</p>
+            </div>
+        </div>
+
+        <div class="author_card">
+            <div class="author_img">
+                <img src="image/review_4.png" alt="Autor 2">
+            </div>
+            <div class="author_info">
+                <h2>Autor 4</h2>
+                <p>Descrição breve sobre o autor. Pode incluir informações sobre suas principais obras ou contribuições.</p>
+            </div>
+        </div>
+
+        <div class="author_card">
+            <div class="author_img">
+                <img src="image/review_4.png" alt="Autor 2">
+            </div>
+            <div class="author_info">
+                <h2>Autor 4</h2>
+                <p>Descrição breve sobre o autor. Pode incluir informações sobre suas principais obras ou contribuições.</p>
+            </div>
+        </div>
+        
     </div>
+</div>
 
     <!-- Footer -->
     <footer>

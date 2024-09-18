@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - BookVerse</title>
+    <link rel="stylesheet" href="../styles/registro.css">
+</head>
+<body>
+    <div class="page">
+        <!-- Página de Registro -->
+        <div id="registerSection">
+            <form id="registerForm" method="POST" class="formRegister">
+                <h1>Cadastro - BookVerse</h1>
+                <p>Preencha os campos abaixo para criar uma conta.</p>
+                <label for="registerName">Nome</label>
+                <input type="text" id="registerName" placeholder="Digite seu nome" required />
+                <div id="registerNameError" class="error"></div>
+                <label for="registerEmail">E-mail</label>
+                <input type="email" id="registerEmail" placeholder="Digite seu e-mail" required />
+                <div id="registerEmailError" class="error"></div>
+                <label for="registerPassword">Senha</label>
+                <input type="password" id="registerPassword" placeholder="Digite sua Senha" required />
+                <div id="registerPasswordError" class="error"></div>
+                <input type="submit" value="Cadastrar" class="btn" />
+                <p>Já tem uma conta? <a href="login.html">Faça login</a></p>
+            </form>
+        </div>
+
+        <!-- Modal de Sucesso do Cadastro -->
+        <div id="registerSuccessModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('registerSuccessModal')">&times;</span>
+                <p>Cadastro realizado com sucesso!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Inclua o script JavaScript aqui -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,681 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: rgb(251, 251, 251); /* Define a cor de fundo global */
+}
+
+/* Navbar */
+nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff; /* Garante que o fundo seja branco */
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    padding: 10px 20px; /* Ajuste o padding para garantir que tudo tenha espaço */
+}
+
+nav .logo {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    gap: 10px; /* Espaço entre o ícone e o texto */
+}
+
+nav .logo .logo-icon {
+    font-size: 40px; /* Tamanho do ícone */
+    color: #0066ff; /* Cor azul para o ícone */
+    background-color: #fff;
+}
+
+nav .logo .logo-text {
+    font-size: 24px; /* Tamanho da fonte do texto */
+    font-weight: bold;
+    color: #0066ff; /* Cor azul para o texto */
+    background-color: #fff;
+    text-transform: uppercase; /* Opcional: transforma o texto em maiúsculas */
+    letter-spacing: 2px; /* Opcional: espaçamento entre letras */
+}
+
+nav .search-box {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    max-width: 600px;
+    margin: 0 20px;
+}
+
+nav .search-box select,
+nav .search-box input,
+nav .search-box button {
+    padding: 10px;
+    border: 2px solid #B100FF;
+}
+
+nav .search-box select {
+    border-radius: 10px 0 0 10px;
+    background-color: #fff !important; /* Garante que o fundo seja branco */
+    color: #000;
+    outline: none;
+    cursor: pointer;
+}
+
+nav .search-box input {
+    width: 100%;
+    border-left: none;
+    border-radius: 0;
+    outline: none;
+    background-color: #fff !important; /* Garante que o fundo seja branco */
+}
+
+nav .search-box button {
+    background-color: #B100FF; /* Cor de fundo do botão */
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+nav .search-box button i {
+    font-size: 16px;
+}
+
+/* Seções da Navbar */
+nav .sections {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espaço entre cada item */
+    background-color: transparent;
+}
+
+nav .sections a {
+    color: #000;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    padding: 8px 16px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    background-color: transparent;
+}
+
+nav .sections a:hover {
+    color: #B100FF;
+    background-color: rgba(177, 0, 255, 0.1);
+    border-radius: 5px;
+}
+
+/* Pesquisa */
+nav .search-icon {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: #000;
+    font-size: 20px;
+    transition: color 0.3s ease;
+    background-color: transparent;
+    border: none;
+}
+
+nav .search-icon:hover {
+    color: #B100FF;
+    background-color: transparent;
+}
+
+nav .search-icon i {
+    margin-left: 10px;
+    background-color: transparent;
+}
+
+/* Remove bordas e padding que podem estar forçando um fundo */
+nav .search-icon i, 
+nav .search-icon, 
+nav .search-icon * {
+    background-color: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+}
+
+/* Campo de Busca Escondido */
+nav .search-box {
+    display: none;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+nav.active .search-box {
+    display: flex;
+}
+
+nav .search-box input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #B100FF;
+    border-radius: 5px;
+    outline: none;
+}
+
+nav .search-box button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #B100FF;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav .search-box button:hover {
+    background-color: #A000E0;
+}
+
+/* Social Icons */
+nav .social-icon {
+    display: flex;
+    background-color: #fff;
+    align-items: center;
+    gap: 20px; /* Espaço entre os ícones */
+}
+
+nav .social-icon .icon {
+    display: flex;
+    align-items: center;
+    color: #000;
+    background-color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+nav .social-icon .icon:hover {
+    color: #B100FF;
+    background-color: #fff;
+}
+
+nav .social-icon i {
+    margin-right: 8px;
+    background-color: #fff;
+    font-size: 20px;
+}
+
+nav .social-icon span {
+    display: inline; /* Garante que o texto seja exibido ao lado do ícone */
+    background-color: #fff;
+    margin-left: 8px; /* Espaço entre o ícone e o texto */
+}
+
+
+/* Promo */
+
+.promo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: rgb(251, 251, 251);
+    padding: 50px 0;
+    margin: 45px;
+    max-width: 100%;
+    position: relative; /* Mantém o círculo dentro da seção promocional */
+}
+
+.promo-text {
+    max-width: 600px;
+}
+
+.promo-text h1 {
+    font-size: 45px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.promo-text p {
+    font-size: 20px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.promo-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #0066ff;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.promo-btn:hover {
+    background-color: #0056e0;
+}
+
+.promo-image {
+    position: relative;
+    margin-left: 150px; /* Ajuste o espaço entre a imagem e o texto */
+    overflow: visible; /* Garante que o círculo visível não seja cortado */
+    z-index: 2; /* Garante que a imagem fique sobre o círculo */
+}
+
+.promo-image img {
+    max-width: 400px;
+    border-radius: 10px;
+    position: relative;
+    display: block; /* Evita que o fundo branco da imagem se expanda */
+}
+
+.promo-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    height: 500px;
+    background-color: rgb(220, 240, 248);
+    border-radius: 50%;
+    border: 10px solid #e0e0e0; /* Linha externa */
+    z-index: 1; /* Mantém o círculo atrás da imagem */
+    transform: translate(-50%, -50%);
+    opacity: 0.2;
+}
+
+/* Seção de Livros em Destaque */
+.featured_books {
+    width: 100%;
+    padding: 20px;
+    background-color: rgb(251, 251, 251);
+}
+
+.featured_books h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-left: 10px;
+    padding-left: 20px;
+}
+
+.featured_books_box {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 10px;
+    scroll-behavior: smooth;
+    scrollbar-width: none; /* Para Firefox */
+}
+
+.featured_books_box::-webkit-scrollbar {
+    display: none; /* Para WebKit */
+}
+
+.featured_book_card {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+    text-decoration: none;
+    color: inherit;
+}
+
+.featured_book_card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.featured_book_img img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
+
+.featured_book_tag {
+    padding: 15px;
+}
+
+.featured_book_tag h2 {
+    font-size: 1.2rem;
+    margin: 0;
+    color: #333;
+}
+
+.featured_book_tag .writer {
+    color: #555;
+    margin: 5px 0;
+}
+
+.featured_book_tag .categories {
+    color: #888;
+    margin: 5px 0;
+}
+
+.featured_book_tag .book_price {
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.featured_book_tag .book_price del {
+    color: #888;
+    margin-left: 5px;
+}
+
+/* Seção de Detalhes */
+.book_details {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.book_details:target {
+    display: block;
+}
+
+.book_details .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1.5em;
+    text-decoration: none;
+    color: #6a1b9a;
+}
+
+.book_details .close:hover {
+    color: #4a148c;
+}
+
+/* Banner */
+.explore-box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(234, 243, 247);
+    border-radius: 10px;
+    max-width: 1300px; /* Ajuste conforme necessário */
+    margin: 50px auto; /* Centralize horizontalmente */
+    padding: 64px 0px 64px 64px;
+    min-height: 400px;
+    overflow: hidden; /* Para garantir que o círculo não escape do box */
+}
+
+.explore-title {
+    font-size: 40px; /* Aumente o tamanho do título conforme necessário */
+    color: #333;
+    background-color: transparent;
+    margin-bottom: 20px;
+    z-index: 3; /* Ajuste para garantir que o título fique sobre os círculos */
+    position: relative; /* Certifique-se de que o título fique acima dos círculos */
+}
+
+.explore-quote {
+    font-size: 16px; /* Aumente o tamanho do quote conforme necessário */
+    font-weight: 400;
+    color: #666;
+    background-color: transparent;
+    display: block;
+    margin-bottom: 30px;
+    z-index: 3; /* Ajuste para garantir que o quote fique sobre os círculos */
+    position: relative; /* Certifique-se de que o quote fique acima dos círculos */
+}
+
+.explore-button {
+    margin: 0;
+    display: inline-block;
+    padding: 16px 30px; /* Ajuste o padding para um tamanho mais compacto */
+    background-color: #0066ff;
+    color: #fff;
+    font-size: 14px; /* Ajuste o tamanho da fonte para um tamanho menor */
+    border-radius: 20px; /* Arredondamento mais sutil */
+    text-decoration: none;
+    z-index: 3;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    width: auto; /* Certifique-se de que a largura é automática para o conteúdo */
+    max-width: 150px; /* Defina uma largura máxima para o botão */
+    text-align: center; /* Centralize o texto no botão */
+}
+
+
+.explore-button:hover {
+    background-color: #0056e0;
+}
+
+.explore-box::before {
+    content: "";
+    width: 80px;
+    height: 80px;
+    background-color: rgb(208, 237, 209);
+    border-radius: 100%;
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    z-index: 1; /* Para o círculo ficar atrás do conteúdo */
+}
+
+.explore-box::after {
+    content: "";
+    width: 272px;
+    height: 272px;
+    background-color: rgb(208, 228, 237);
+    border-radius: 100%;
+    position: absolute;
+    top: 50%; /* Mantém a posição vertical centralizada */
+    left: 75%; /* Ajuste a posição horizontal para a direita */
+    transform: translate(-50%, -35%); /* Centraliza o círculo baseado no ponto ajustado */
+    z-index: 1;
+    opacity: 0.6;
+}
+
+.explore-image {
+    position: absolute;
+    top: 50%; /* Ajusta a posição vertical para centralizar sobre o círculo */
+    left: 80%; /* Ajusta a posição horizontal para a direita, além do círculo */
+    transform: translate(-50%, -35%); /* Centraliza a imagem baseado na posição ajustada */
+    z-index: 2; /* Garante que a imagem fique sobre o círculo */
+    max-width: 500px; /* Aumenta o tamanho da imagem conforme necessário */
+    height: auto;
+    background-color: transparent; /* Remove o fundo branco da imagem */
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px; /* Largura da scrollbar vertical */
+    height: 10px; /* Altura da scrollbar horizontal */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Cor de fundo da pista da scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #B100FF; /* Cor do "polegar" da scrollbar */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a100e6; /* Cor do "polegar" quando estiver sobreposto */
+}
+
+/* Seção de Autores Populares */
+.authors {
+    width: 100%;
+    height: auto;
+    padding: 50px 0;
+    background-color: #f9f9f9; /* Cor de fundo opcional para a seção */
+}
+
+.authors h1 {
+    font-size: 50px;
+    margin-bottom: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.authors .author_box {
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: nowrap; /* Garante que os cards fiquem em uma única linha */
+    overflow-x: auto; /* Adiciona rolagem horizontal se necessário */
+    overflow-y: hidden; /* Garante que não haja rolagem vertical */
+    justify-content: flex-start; /* Alinha os cards à esquerda */
+    gap: 20px; /* Espaço entre os cards */
+    padding-bottom: 20px; /* Espaço para a barra de rolagem horizontal */
+    align-items: flex-start; /* Garante que os cards estejam alinhados ao topo */
+}
+
+.authors .author_box .author_card {
+    width: 300px;
+    min-width: 300px; /* Garante que os cards não diminuam abaixo de 300px */
+    height: auto; /* Permite que a altura se ajuste conforme o conteúdo */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: #fff; /* Cor de fundo branca para os cards */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex; /* Garante que o conteúdo se ajuste dentro do card */
+    flex-direction: column;
+    align-items: center; /* Alinha o conteúdo centralizado */
+    justify-content: center; /* Alinha o conteúdo centralizado */
+}
+
+.authors .author_box .author_card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.authors .author_box .author_card .author_img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 15px;
+}
+
+.authors .author_box .author_card .author_img img {
+    width: 100%;
+    height: auto;
+}
+
+.authors .author_box .author_card .author_info {
+    background-color: #fff; /* Cor de fundo branca para a área de informações */
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.authors .author_box .author_card .author_info h2 {
+    font-size: 20px;
+    margin: 10px 0;
+    background-color: transparent;
+}
+
+.authors .author_box .author_card .author_info p {
+    font-size: 16px;
+    color: #666;
+    background-color: transparent;
+}
+
+
+/* Estilo para o Footer */
+footer {
+    background-color: transparent;
+    color: #333;
+    padding: 20px 0;
+    border-top: 1px solid #ddd;
+}
+
+.footer_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer_section {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+}
+
+.footer_section h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #B100FF;
+}
+
+.footer_section p {
+    margin: 5px 0;
+}
+
+.footer_section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer_section ul li {
+    margin-bottom: 8px;
+}
+
+.footer_section ul li a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer_section ul li a:hover {
+    color: #B100FF;
+}
+
+.social_links {
+    display: flex;
+    gap: 10px;
+}
+
+.social_icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    color: #333;
+    text-align: center;
+    line-height: 24px;
+    border-radius: 50%;
+    background-color: transparent;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.social_icon:hover {
+    background-color: #B100FF;
+    color: #fff;
+}
+
+.footer_bottom {
+    text-align: center;
+    padding: 10px 20px;
+    border-top: 1px solid #ddd;
+    margin-top: 20px;
+}
+
+.footer_bottom p {
+    margin: 0;
+    font-size: 14px;
+}
