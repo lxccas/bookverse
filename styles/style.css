@@ -1,3 +1,16 @@
+/* Estilos para telas menores */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+}
+
+/* Estilos para telas maiores */
+@media (min-width: 769px) {
+    .container {
+        flex-direction: row;
+    }
+}
 
 * {
     margin: 0;
@@ -43,47 +56,7 @@ nav .logo .logo-text {
     letter-spacing: 2px; 
 }
 
-nav .search-box {
-    display: flex;
-    align-items: center;
-    flex: 1;
-    max-width: 600px;
-    margin: 0 20px;
-}
 
-nav .search-box select,
-nav .search-box input,
-nav .search-box button {
-    padding: 10px;
-    border: 2px solid #B100FF;
-}
-
-nav .search-box select {
-    border-radius: 10px 0 0 10px;
-    background-color: #fff !important; 
-    color: #000;
-    outline: none;
-    cursor: pointer;
-}
-
-nav .search-box input {
-    width: 100%;
-    border-left: none;
-    border-radius: 0;
-    outline: none;
-    background-color: #fff !important; 
-}
-
-nav .search-box button {
-    background-color: #B100FF; 
-    color: #fff;
-    border-radius: 0 5px 5px 0;
-    cursor: pointer;
-}
-
-nav .search-box button i {
-    font-size: 16px;
-}
 
 
 nav .sections {
@@ -297,26 +270,35 @@ nav .social-icon span {
     color: #333;
     margin-left: 10px;
     padding-left: 20px;
+    display: flex; 
+    align-items: center;
+}
+
+.featured_books_container {
+    display: flex;
+    align-items: center; /* Centraliza verticalmente os botões com os livros */
 }
 
 .featured_books_box {
     display: flex;
-    overflow-x: auto;
+    overflow-x: scroll; /* Permite a rolagem horizontal */
     gap: 20px;
     padding: 10px;
     scroll-behavior: smooth;
     scrollbar-width: none; 
+    width: auto; /* Ajusta a largura para permitir expansão */
 }
 
 .featured_books_box::-webkit-scrollbar {
-    display: none; 
+    display: block; /* Exibe a barra de rolagem */
 }
 
 .featured_book_card {
     display: flex;
     flex-direction: column;
-    width: 200px;
-    background-color: #fff;
+    width: 200px; /* Largura fixa para os cards */
+    min-width: 200px; /* Largura mínima para os cards */
+    background-color: transparent;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -327,7 +309,7 @@ nav .social-icon span {
 }
 
 .featured_book_card:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
@@ -367,7 +349,6 @@ nav .social-icon span {
     color: #888;
     margin-left: 5px;
 }
-
 
 .book_details {
     display: none;
@@ -760,4 +741,17 @@ footer {
 .footer_bottom p {
     margin: 0;
     font-size: 14px;
+}
+
+.view-all-link {
+    font-size: 1rem; /* Tamanho da fonte */
+    color: #007BFF; /* Cor do link */
+    text-decoration: none; /* Sublinhado */
+    margin-left: 10px; /* Espaçamento à esquerda */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+}
+
+.view-all-link:hover {
+    text-decoration: none; /* Remove o sublinhado ao passar o mouse */
+    color: #0055af; /* Cor mais escura ao passar o mouse */
 }
