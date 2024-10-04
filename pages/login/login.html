@@ -1,87 +1,111 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="./login.css">
-</head>
-<body>
-    <div class="page">
-        <!-- Página de Login -->
-        <div id="loginSection">
-            <form id="loginForm" method="POST" class="formLogin">
-                <h1>BookVerse</h1>
-                <p>Digite os seus dados de acesso no campo abaixo.</p>
-                <label for="loginEmail">E-mail</label>
-                <input type="email" id="loginEmail" placeholder="Digite seu e-mail" required />
-                <div id="loginEmailError" class="error"></div>
-                <label for="loginPassword">Senha</label>
-                <input type="password" id="loginPassword" placeholder="Digite sua Senha" required />
-                <div id="loginPasswordError" class="error"></div>
-                <a href="#" onclick="showForgotPassword()">Esqueci minha senha</a>
-                <input type="submit" value="Acessar" class="btn" />
-                <p>Não tem uma conta? <a href="../registro/registro.html" onclick="showRegisterForm()">Cadastre-se</a></p>
-            </form>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="login.css" />
+    <link rel="icon" href="../../image/bluebook.png" type="image/svg+xml">
+    <title>BookVerse</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="forms-container">
+        <div class="signin-signup">
+          <form action="#" class="sign-in-form">
+            <h2 class="title">Logar</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" placeholder="Usuário" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" placeholder="Senha" />
+            </div>
+            <input type="submit" value="Entrar" class="btn solid" />
+            <p class="social-text">Ou logue em outras plataformas sociais</p>
+            <div class="social-media">
+              <a href="#" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-google"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </form>
+          <form action="#" class="sign-up-form">
+            <h2 class="title">Registrar</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" placeholder="Usuário" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-envelope"></i>
+              <input type="email" placeholder="Email" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" placeholder="Senha" />
+            </div>
+            <input type="submit" class="btn" value="Registrar" />
+            <p class="social-text">Ou registre em outras plataformas sociais</p>
+            <div class="social-media">
+              <a href="#" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-google"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </form>
         </div>
+      </div>
 
-        <!-- Página de Cadastro -->
-        <div id="registerSection" style="display: none;">
-            <form id="registerForm" method="POST" class="formRegister">
-                <h1>Cadastro</h1>
-                <p>Preencha os campos abaixo para criar uma conta.</p>
-                <label for="registerName">Nome</label>
-                <input type="text" id="registerName" placeholder="Digite seu nome" required />
-                <label for="registerEmail">E-mail</label>
-                <input type="email" id="registerEmail" placeholder="Digite seu e-mail" required />
-                <div id="registerEmailError" class="error"></div>
-                <label for="registerPassword">Senha</label>
-                <input type="password" id="registerPassword" placeholder="Digite sua Senha" required />
-                <div id="registerPasswordError" class="error"></div>
-                <input type="submit" value="Cadastrar" class="btn" />
-                <p>Já tem uma conta? <a href="#" onclick="showLoginForm()">Faça login</a></p>
-            </form>
+      <div class="panels-container">
+        <div class="panel left-panel">
+          <div class="content">
+            <h3>Novo aqui ?</h3>
+            <p>
+              Registre em nosso site para ter acesso aos mais diversos
+              livros e autores renomados atualmente.
+            </p>
+            <button class="btn transparent" id="sign-up-btn">
+              Registrar
+            </button>
+          </div>
+          <img src="img/log.svg" class="image" alt="" />
         </div>
-
-        <!-- Página de Redefinição de Senha -->
-        <div id="forgotPasswordSection" style="display: none;">
-            <form id="forgotPasswordForm" method="POST" class="formForgotPassword">
-                <h1>Esqueceu a Senha</h1>
-                <p>Digite seu e-mail para receber instruções para redefinir a senha.</p>
-                <label for="forgotPasswordEmail">E-mail</label>
-                <input type="email" id="forgotPasswordEmail" placeholder="Digite seu e-mail" required />
-                <div id="forgotPasswordError" class="error"></div>
-                <input type="submit" value="Enviar Instruções" class="btn" />
-                <p><a href="#" onclick="showLoginForm()">Voltar ao login</a></p>
-            </form>
+        <div class="panel right-panel">
+          <div class="content">
+            <h3>Já é um de nós ?</h3>
+            <p>
+              Acesse o nosso site para ter acesso a todos os recursos
+              disponíveis.
+            </p>
+            <button class="btn transparent" id="sign-in-btn">
+              Logar
+            </button>
+          </div>
+          <img src="img/register.svg" class="image" alt="" />
         </div>
-
-    <!-- Modal de Sucesso do Login -->
-    <div id="loginSuccessModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('loginSuccessModal')">&times;</span>
-            <p>Você logou com sucesso!</p>
-        </div>
+      </div>
     </div>
 
-    <!-- Modal de Sucesso do Cadastro -->
-    <div id="registerSuccessModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('registerSuccessModal')">&times;</span>
-            <p>Cadastro realizado com sucesso!</p>
-        </div>
-    </div>
-
-    <!-- Modal de Envio de Senha -->
-    <div id="forgotPasswordSuccessModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('forgotPasswordSuccessModal')">&times;</span>
-            <p>Instruções para redefinir a senha foram enviadas para o seu e-mail!</p>
-        </div>
-    </div>
-
-    <!-- Inclua o script JavaScript aqui -->
-    <script src="script.js"></script>
-</body>
+    <script src="app.js"></script>
+  </body>
 </html>

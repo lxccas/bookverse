@@ -1,20 +1,21 @@
 const apiKey = 'AIzaSyCgfacSBjjf1Ah94qwnQOXfWhdBomOM2vg';
 
-async function fetchBooksByGenre(genre, containerId) {
+async function fetchBooksByGenre(genre) {
     try {
-        const response = await fetch(`https://www.googleapis.com/books/v1/volumes?q=subject:${genre}&key=${apiKey}&maxResults=6`);
+        const response = await fetch(`https://www.googleapis.com/books/v1/volumes?q=subject:${genre}+&filter=paid-ebooks&key=${apiKey}&maxResults=6`);
         const data = await response.json();
-        displayFeaturedBooks(data.items, containerId);
+        return data.items || [];
     } catch (error) {
         console.error('Erro ao buscar livros:', error);
+        return [];
     }
 }
 
-function displayFeaturedBooks(books, containerId) {
+function displayBooks(books, containerId) {
     const container = document.getElementById(containerId);
     container.innerHTML = '';
 
-    books.forEach(book => {
+    books.map(book => {
         const bookInfo = book.volumeInfo;
         const price = book.saleInfo && book.saleInfo.listPrice ? `R$${book.saleInfo.listPrice.amount}` : 'Preço indisponível';
         const thumbnail = bookInfo.imageLinks ? bookInfo.imageLinks.thumbnail : 'image/default_book.jpg';
@@ -22,7 +23,7 @@ function displayFeaturedBooks(books, containerId) {
         const categories = bookInfo.categories ? bookInfo.categories.join(', ') : 'Categoria desconhecida';
         const bookId = book.id;
 
-        const bookCard = `
+        return `
             <a href="#" class="featured_book_card" data-book-id="${bookId}">
                 <div class="featured_book_img">
                     <img src="${thumbnail}" alt="${bookInfo.title}">
@@ -35,7 +36,7 @@ function displayFeaturedBooks(books, containerId) {
                 </div>
             </a>
         `;
-
+    }).forEach(bookCard => {
         container.innerHTML += bookCard;
     });
 
@@ -43,9 +44,17 @@ function displayFeaturedBooks(books, containerId) {
         card.addEventListener('click', (event) => {
             event.preventDefault();
             const bookId = card.getAttribute('data-book-id');
-            fetchBookDetails(bookId);
+            fetchBookDetails(bookId); 
         });
     });
+}
+
+async function fetchAndDisplayBooks() {
+    const genres = ['Fiction', 'Fantasy', 'Romance', 'Horror'];
+    for (const genre of genres) {
+        const books = await fetchBooksByGenre(genre);
+        displayBooks(books, `${genre.toLowerCase()}_books_box`);
+    }
 }
 
 function stripHtml(html) {
@@ -61,10 +70,15 @@ async function fetchBookDetails(bookId) {
 
         const bookData = await response.json();
         const bookInfo = bookData.volumeInfo;
+        const saleInfo = bookData.saleInfo;
+
+        console.log(bookData);
 
         document.getElementById('book-title').textContent = bookInfo.title;
         document.getElementById('book-cover').src = bookInfo.imageLinks ? bookInfo.imageLinks.thumbnail : 'image/default_book.jpg';
-        document.getElementById('book-price').textContent = bookInfo.saleInfo && bookInfo.saleInfo.listPrice.amount ? `R$${bookInfo.saleInfo.listPrice.amount}` : 'Preço indisponível';
+
+        document.getElementById('book-price').textContent = saleInfo && saleInfo.listPrice ? `R$${saleInfo.listPrice.amount}` : 'Preço indisponível';
+
         document.getElementById('book-pages').textContent = bookInfo.pageCount ? `${bookInfo.pageCount} páginas` : 'Número de páginas desconhecido';
         document.getElementById('book-rating').textContent = bookInfo.averageRating ? `★ ${bookInfo.averageRating}` : 'Sem avaliações';
         document.getElementById('book-description').textContent = stripHtml(bookInfo.description ? bookInfo.description : 'Descrição não disponível');
@@ -81,6 +95,20 @@ document.querySelector('.close').addEventListener('click', function(event) {
     document.getElementById('book-details').style.display = 'none';
 });
 
-fetchBooksByGenre('Fiction', 'featured_books_box');
-fetchBooksByGenre('Action', 'action_books_box');
-fetchBooksByGenre('Horror', 'horror_books_box');
+document.addEventListener('DOMContentLoaded', function() {
+    const bookDetails = document.getElementById('book-details');
+
+    const cart = document.getElementById('cart');
+
+    document.querySelector('.add_to_cart').addEventListener('click', function() {
+        bookDetails.style.display = 'none';
+        cart.style.display = 'block';
+    });
+
+    document.querySelector('.close').addEventListener('click', function(event) {
+        event.preventDefault();
+        bookDetails.style.display = 'none';
+    });
+});
+
+fetchAndDisplayBooks();

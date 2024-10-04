@@ -16,8 +16,19 @@ nav {
     background: #fff; 
     position: fixed;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
     padding: 10px 20px; 
+}
+
+.main {
+    position: absolute;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    width: 90%;
+    top: 90px; 
+    left: 10px;
+    margin-left: 10px;   
 }
 
 
@@ -59,49 +70,6 @@ nav .logo .logo-text {
     letter-spacing: 2px; 
 }
 
-nav .search-box {
-    display: flex;
-    align-items: center;
-    flex: 1;
-    max-width: 600px;
-    margin: 0 20px;
-}
-
-nav .search-box select,
-nav .search-box input,
-nav .search-box button {
-    padding: 10px;
-    border: 2px solid #B100FF;
-}
-
-nav .search-box select {
-    border-radius: 10px 0 0 10px;
-    background-color: #fff !important; 
-    color: #000;
-    outline: none;
-    cursor: pointer;
-}
-
-nav .search-box input {
-    width: 100%;
-    border-left: none;
-    border-radius: 0;
-    outline: none;
-    background-color: #fff !important; 
-}
-
-nav .search-box button {
-    background-color: #B100FF; 
-    color: #fff;
-    border-radius: 0 5px 5px 0;
-    cursor: pointer;
-}
-
-nav .search-box button i {
-    font-size: 16px;
-}
-
-
 nav .sections {
     display: flex;
     align-items: center;
@@ -123,71 +91,6 @@ nav .sections a {
 nav .sections a:hover {
     color: #B100FF;
     border-radius: 5px;
-}
-
-
-nav .search-icon {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    color: #000;
-    font-size: 20px;
-    transition: color 0.3s ease;
-    background-color: transparent;
-    border: none;
-}
-
-nav .search-icon:hover {
-    color: #B100FF;
-    background-color: transparent;
-}
-
-nav .search-icon i {
-    margin-left: 10px;
-    background-color: transparent;
-}
-
-
-nav .search-icon i, 
-nav .search-icon, 
-nav .search-icon * {
-    background-color: transparent !important;
-    border: none !important;
-    padding: 0 !important;
-    box-shadow: none !important;
-}
-
-
-nav .search-box {
-    display: none;
-    flex: 1;
-    justify-content: flex-end;
-}
-
-nav.active .search-box {
-    display: flex;
-}
-
-nav .search-box input {
-    width: 100%;
-    padding: 10px;
-    border: 2px solid #B100FF;
-    border-radius: 5px;
-    outline: none;
-}
-
-nav .search-box button {
-    padding: 10px 15px;
-    border: none;
-    background-color: #B100FF;
-    color: #fff;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-nav .search-box button:hover {
-    background-color: #A000E0;
 }
 
 
@@ -243,28 +146,28 @@ nav .social-icon span {
 
 .featured_books_container {
     display: flex;
-    align-items: center; /* Centraliza verticalmente os botões com os livros */
+    align-items: center; 
 }
 
 .featured_books_box {
     display: flex;
-    overflow-x: scroll; /* Permite a rolagem horizontal */
+    overflow-x: scroll; 
     gap: 20px;
     padding: 10px;
     scroll-behavior: smooth;
     scrollbar-width: none; 
-    width: auto; /* Ajusta a largura para permitir expansão */
+    width: auto; 
 }
 
 .featured_books_box::-webkit-scrollbar {
-    display: block; /* Exibe a barra de rolagem */
+    display: block; 
 }
 
 .featured_book_card {
     display: flex;
     flex-direction: column;
-    width: 200px; /* Largura fixa para os cards */
-    min-width: 200px; /* Largura mínima para os cards */
+    width: 200px; 
+    min-width: 200px; 
     background-color: transparent;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
